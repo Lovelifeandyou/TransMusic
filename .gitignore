@@ -1,0 +1,54 @@
+# ---------- 构建产物 / 缓存 ----------
+release/
+build/
+*.apk
+*.aab
+*.zip
+*.7z
+
+# Android
+android/.gradle/
+android/.idea/
+android/local.properties
+android/build/
+android/app/build/
+android/.kotlin/
+android/app/release/
+android/app/debug/
+*.jks
+*.keystore
+
+# Windows (WinUI 3)
+windows/**/bin/
+windows/**/obj/
+windows/publish/
+windows/TransMusic.App/ffmpeg/
+*.user
+*.suo
+.vs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# 测试中间产物
+tests/_out/
+tests/_ui_out/
+tests/_cancel/
+tests/_winui/
+tests/parity/report.json
+tests/parity/cases.txt
+
+# 生成的演示音频（体积大，用 tools/make_demo_audio.py 重新生成）
+samples/demo/
+samples/long*.wav
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.log
+
+# ���������� tests �Զ��ؽ���
+tests/parity/harness.jar

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="TransMusic.App.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--
+              品牌色覆盖：WinUI 默认跟随系统强调色（可能是粉/橙），
+              这里固定成与 Android / 桌面版一致的品牌蓝 #4C8DFF。
+            -->
+            <Color x:Key="SystemAccentColor">#FF4C8DFF</Color>
+            <Color x:Key="SystemAccentColorLight2">#FF7FAEFF</Color>
+            <Color x:Key="SystemAccentColorLight3">#FFA9C6FF</Color>
+            <Color x:Key="SystemAccentColorDark1">#FF3B78E0</Color>
+            <Color x:Key="SystemAccentColorDark2">#FF2C5FB8</Color>
+
+            <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="#FF4C8DFF" />
+            <SolidColorBrush x:Key="AccentFillColorSecondaryBrush" Color="#E64C8DFF" />
+            <SolidColorBrush x:Key="AccentFillColorTertiaryBrush" Color="#CC4C8DFF" />
+            <SolidColorBrush x:Key="AccentTextFillColorPrimaryBrush" Color="#FF7FB0FF" />
+            <SolidColorBrush x:Key="AccentTextFillColorSecondaryBrush" Color="#FF9CC1FF" />
+            <SolidColorBrush x:Key="AccentTextFillColorTertiaryBrush" Color="#FFB5CFFF" />
+            <SolidColorBrush x:Key="TextOnAccentFillColorPrimaryBrush" Color="#FF04101F" />
+            <SolidColorBrush x:Key="TextOnAccentFillColorSecondaryBrush" Color="#E604101F" />
+            <SolidColorBrush x:Key="ControlOnImageFillColorDefault" Color="#FF4C8DFF" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

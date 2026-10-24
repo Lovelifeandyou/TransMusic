@@ -1,0 +1,12 @@
+# 运行时依赖（Python 侧：命令行工具 + 三端格式数据的单一数据源 + 测试基准）
+mutagen>=1.46            # 读取/校验音频标签、时长、位深（Python CLI 探测用）
+imageio-ffmpeg>=0.4.9    # 自动提供 ffmpeg 二进制（也可自行放置 ffmpeg.exe）
+
+# Windows 图形界面（WinUI 3）不依赖 Python：
+#   构建需要 .NET 8 SDK，依赖由 NuGet 还原（Microsoft.WindowsAppSDK）
+# Android 版不依赖 Python：
+#   构建需要 Android Studio / Gradle，依赖由 Maven 还原（FFmpegKit）
+#
+# 打包/测试用的额外工具（按需安装）：
+#   pyinstaller        —— 早期 tkinter 版的打包工具，现已不再使用
+#   kotlin-compiler    —— tests/parity_test.py 编译 Android 端 CommandBuilder 时用（解压到 tools/kotlinc）

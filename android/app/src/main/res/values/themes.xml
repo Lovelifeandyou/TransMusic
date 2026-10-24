@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Compose 应用只需要一个「无 ActionBar、深色窗口背景」的壳主题；
+      真正的配色/字体/形状全部由 MD3E（Material Design 3 Expressive）在 Compose 侧定义，
+      见 ui/theme/Theme.kt。因此这里不依赖 com.google.android.material。
+    -->
+    <style name="Theme.TransMusic" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorBackground">@color/bg</item>
+    </style>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 界面文案全部写在 Compose 代码里（ui/ 下），这里只保留 Manifest 需要的应用名 -->
+    <string name="app_name">音频格式转换器</string>
+</resources>
