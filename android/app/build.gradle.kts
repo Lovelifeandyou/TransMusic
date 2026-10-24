@@ -12,8 +12,8 @@ android {
         applicationId = "com.transmusic.converter"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 2
+        versionName = "1.0.1"
 
         // ffmpeg-kit 自带原生库：真机用 arm64/armv7，模拟器用 x86_64。
         // 打包分发时可用 -PabiFilters=arm64-v8a,armeabi-v7a 只留 ARM 架构（体积减半）。

@@ -22,6 +22,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -175,6 +181,9 @@ fun ConvertScreen(viewModel: ConvertViewModel) {
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
+        // 竖向 inset（状态栏 / 导航栏）由下面的 topBar、bottomBar 各自吃进去，
+        // 这里只保留横向（横屏刘海、挖孔侧边），避免内容重复缩进。
+        contentWindowInsets = WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal),
         topBar = {
             ScreenHeader(
                 engineVersion = engineVersion,
@@ -302,6 +311,8 @@ private fun ScreenHeader(
     Column(
         Modifier
             .fillMaxWidth()
+            // 状态栏（含刘海 / 灵动岛区域）高度并入顶栏，标题不再被系统栏压住
+            .statusBarsPadding()
             .padding(start = 18.dp, end = 10.dp, top = 6.dp, bottom = 2.dp),
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -455,6 +466,8 @@ private fun ActionBar(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
+                // 背景色延伸到屏幕最底部，按钮则整体上移到手势条 / 导航栏之上
+                .navigationBarsPadding()
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
