@@ -76,6 +76,19 @@ public sealed class Job : INotifyPropertyChanged
         }
     }
 
+    private string? _coverPath;
+    /// <summary>封面缓存文件路径（没有封面时为 null）。</summary>
+    public string? CoverPath
+    {
+        get => _coverPath;
+        set
+        {
+            if (Set(ref _coverPath, value)) Raise(nameof(HasCoverImage));
+        }
+    }
+
+    public bool HasCoverImage => !string.IsNullOrWhiteSpace(_coverPath);
+
     private TimeSpan _elapsed;
     public TimeSpan Elapsed
     {
@@ -105,7 +118,13 @@ public sealed class Job : INotifyPropertyChanged
     {
         get
         {
-            var codec = string.IsNullOrWhiteSpace(Info.Codec) ? Extension : Info.Codec.ToUpperInvariant();
+            var raw = string.IsNullOrWhiteSpace(Info.Codec) ? Extension : Info.Codec.ToUpperInvariant();
+            // ffmpeg 解 DSD 报 dsd_lsbf_planar 之类，列表里统一显示 DSD
+            var codec = raw.StartsWith("DSD", StringComparison.OrdinalIgnoreCase) ||
+                        raw.Equals("DSF", StringComparison.OrdinalIgnoreCase) ||
+                        raw.Equals("DFF", StringComparison.OrdinalIgnoreCase)
+                ? "DSD"
+                : raw;
             var parts = new List<string> { codec, Info.DurationText, Info.BitrateText, Info.SampleRateText, Info.ChannelsText };
             return string.Join(" · ", parts.Where(p => !string.IsNullOrWhiteSpace(p) && p != "-"));
         }
@@ -130,7 +149,7 @@ public sealed class Job : INotifyPropertyChanged
     /// <summary>一次性刷新所有只读展示属性（列表行重建时用）。</summary>
     public void RaiseAll()
     {
-        foreach (var name in new[] { nameof(Status), nameof(Progress), nameof(StatusText), nameof(ProgressText), nameof(MetaText), nameof(ShowProgress), nameof(Message) })
+        foreach (var name in new[] { nameof(Status), nameof(Progress), nameof(StatusText), nameof(ProgressText), nameof(MetaText), nameof(ShowProgress), nameof(Message), nameof(CoverPath), nameof(HasCoverImage) })
         {
             Raise(name);
         }

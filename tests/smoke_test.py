@@ -187,6 +187,30 @@ def main() -> int:
         print(f"  {preset.label:<16} OK  {got.codec:<10} {got.bitrate_text:<10} "
               f"{got.sr_text:<9} {got.channels_text}")
 
+    # DSD 输入（.dsf）：解码 → FLAC/WAV/MP3，校验降采样与输出
+    print("\n── DSD 输入（DSD64 → PCM）")
+    dsd_src = SAMPLES / "dsd64_test.dsf"
+    if not dsd_src.exists():
+        run([sys.executable, str(ROOT / "tools" / "make_dsd_sample.py"), str(dsd_src), "1.0", "64"])
+    dsd_info = engine.probe(dsd_src)
+    print(f"  源：{dsd_info.codec} {dsd_info.sample_rate} Hz {dsd_info.channels_text}")
+    if not engine.is_dsd_source(dsd_info.codec, dsd_info.sample_rate, str(dsd_src)):
+        failures.append("DSD 源识别失败")
+    for key, depth, sr, expect_sr in (("flac", 24, 0, 88200), ("wav", 24, 0, 88200), ("mp3", 0, 0, 48000)):
+        fmt = FORMATS[key]
+        settings = ConvertSettings(format_key=key, bitrate=320, bit_depth=depth, sample_rate=sr,
+                                   comp_level=fmt.default_comp() if fmt.comp_levels else -1)
+        dst = OUT / f"dsd_{key}.{fmt.ext}"
+        res = engine.convert(dsd_src, dst, fmt, settings, dsd_info)
+        if not res.ok:
+            failures.append(f"DSD → {key}: {res.message}")
+            continue
+        got = engine.probe(dst)
+        ok = got.sample_rate == expect_sr and got.duration > 0.5
+        print(f"  DSD → {key:<5} ok={res.ok} {got.sr_text:<9} {got.channels_text} {got.duration:.2f}s")
+        if not ok:
+            failures.append(f"DSD → {key} 采样率应为 {expect_sr}，实际 {got.sample_rate}")
+
     # 取消
     print("\n── 取消机制")
     import threading

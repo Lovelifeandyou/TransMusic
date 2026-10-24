@@ -32,6 +32,7 @@ public sealed class ConvertViewModel : INotifyPropertyChanged
         _settings = AppSettings.Load();
 
         FormatIndex = Math.Max(0, Core.Formats.Ordered.ToList().FindIndex(f => f.Key == _settings.FormatKey));
+        ThemeModeIndex = Math.Clamp(_settings.ThemeMode, 0, 2);
         KeepMetadata = _settings.KeepMetadata;
         KeepCover = _settings.KeepCover;
         Workers = Math.Clamp(_settings.Workers, 1, 8);
@@ -164,6 +165,14 @@ public sealed class ConvertViewModel : INotifyPropertyChanged
     {
         get => _outputDir;
         set => Set(ref _outputDir, value);
+    }
+
+    private int _themeModeIndex;
+    /// <summary>0=跟随系统，1=浅色，2=深色。</summary>
+    public int ThemeModeIndex
+    {
+        get => _themeModeIndex;
+        set => Set(ref _themeModeIndex, value);
     }
 
     private bool _sameAsSource = true;
@@ -378,6 +387,29 @@ public sealed class ConvertViewModel : INotifyPropertyChanged
         StatusText = $"已添加 {added} 个文件";
         AppendLog($"添加 {added} 个文件");
         RecomputeOverall();
+        _ = FillCoversAsync();
+    }
+
+    /// <summary>后台把内嵌封面导出成缩略图，列表里就能直接看到专辑封面。</summary>
+    private async Task FillCoversAsync()
+    {
+        var pending = Jobs.Where(j => j.Info.HasCover && string.IsNullOrEmpty(j.CoverPath)).ToList();
+        if (pending.Count == 0) return;
+        foreach (var job in pending)
+        {
+            var path = await Task.Run(() => CoverCache.TryExtract(job.SourcePath));
+            if (path is not null)
+            {
+                _dispatcher.TryEnqueue(() => job.CoverPath = path);
+            }
+        }
+    }
+
+    /// <summary>把当前主题模式写入 settings.json（切换主题后重启要用）。</summary>
+    public void SaveThemePreference()
+    {
+        _settings.ThemeMode = ThemeModeIndex;
+        _settings.Save();
     }
 
     public void RemoveSelected(IEnumerable<Job> jobs)
@@ -398,6 +430,7 @@ public sealed class ConvertViewModel : INotifyPropertyChanged
             return;
         }
         Jobs.Clear();
+        Task.Run(CoverCache.Clear);
         OverallProgress = 0;
         StatusText = "已清空";
     }
@@ -455,6 +488,7 @@ public sealed class ConvertViewModel : INotifyPropertyChanged
         _settings.Template = Template;
         _settings.Conflict = Conflict;
         _settings.SameAsSource = SameAsSource;
+        _settings.ThemeMode = ThemeModeIndex;
         _settings.OutputDir = OutputDir;
         _settings.Save();
     }

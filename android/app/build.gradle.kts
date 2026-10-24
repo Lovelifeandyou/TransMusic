@@ -12,8 +12,8 @@ android {
         applicationId = "com.transmusic.converter"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.0.1"
+        versionCode = 3
+        versionName = "1.1.0"
 
         // ffmpeg-kit 自带原生库：真机用 arm64/armv7，模拟器用 x86_64。
         // 打包分发时可用 -PabiFilters=arm64-v8a,armeabi-v7a 只留 ARM 架构（体积减半）。
@@ -82,6 +82,8 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.documentfile:documentfile:1.0.1")
+    // 引擎层纯逻辑单测（不需要模拟器，gradle testDebugUnitTest 即可跑）
+    testImplementation("junit:junit:4.13.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
     // ---------- 转码引擎 ----------

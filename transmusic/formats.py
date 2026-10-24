@@ -288,6 +288,14 @@ FORMATS: dict[str, AudioFormat] = {
     ]
 }
 
+# DSD（Direct Stream Digital）没有对应的 ffmpeg 编码器，只支持「解码」。
+# ffmpeg 解码 DSF/DFF 时会先做 8:1 抽取，得到下列 PCM 采样率：
+#   DSD64  (2.8224 MHz) → 352800 Hz
+#   DSD128 (5.6448 MHz) → 705600 Hz
+#   DSD256 (11.2896 MHz) → 1411200 Hz
+DSD_SOURCE_RATES = (352800, 705600, 1411200, 2822400, 5644800, 11289600, 22579200)
+DSD_EXTS = (".dsf", ".dff")
+
 # 界面下拉框顺序：常用在前
 FORMAT_ORDER = [
     "mp3", "m4a_aac", "flac", "wav", "m4a_alac", "ogg", "opus",
@@ -323,6 +331,12 @@ class Preset:
 
 
 PRESETS: tuple[Preset, ...] = (
+    Preset("dsd_flac", "DSD → FLAC 归档", "flac", sample_rate=88200, bit_depth=24, comp_level=8,
+           hint="把 .dsf/.dff 解成 88.2kHz/24bit 无损；DSD128 建议手动改 176.4kHz"),
+    Preset("dsd_wav", "DSD → WAV 24bit", "wav", sample_rate=88200, bit_depth=24,
+           hint="给不支持 DSD 的播放器/音频编辑器"),
+    Preset("dsd_mp3", "DSD → MP3 320", "mp3", bitrate=320,
+           hint="车载与便携播放器通用"),
     Preset("hq_mp3", "MP3 320 通用", "mp3", bitrate=320,
            hint="最保险的互通格式，任何设备都能放"),
     Preset("vbr_mp3", "MP3 V0 高音质", "mp3", vbr_index=0,

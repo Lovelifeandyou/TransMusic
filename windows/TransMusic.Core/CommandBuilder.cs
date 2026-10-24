@@ -2,9 +2,46 @@ using System.Text;
 
 namespace TransMusic.Core;
 
+/// <summary>DSD（.dsf/.dff）相关的判定与参数换算。</summary>
+public static class DsdSupport
+{
+    /// <summary>ffmpeg 解码后的采样率（8x/16x/32x）与 DSD 原生采样率（64x/128x/256x）。</summary>
+    public static readonly IReadOnlySet<int> SourceRates = new HashSet<int>
+    {
+        352800, 705600, 1411200, 2822400, 5644800, 11289600, 22579200,
+    };
+
+    public static bool IsDsdSource(string? codec, int sampleRate, string? path = null)
+    {
+        if (!string.IsNullOrWhiteSpace(codec) &&
+            codec.StartsWith("dsd", StringComparison.OrdinalIgnoreCase)) return true;
+        if (SourceRates.Contains(sampleRate)) return true;
+        if (!string.IsNullOrWhiteSpace(path))
+        {
+            var ext = Path.GetExtension(path);
+            if (ext.Equals(".dsf", StringComparison.OrdinalIgnoreCase) ||
+                ext.Equals(".dff", StringComparison.OrdinalIgnoreCase)) return true;
+        }
+        return false;
+    }
+
+    /// <summary>DSD 源默认降到 PCM 常用倍频：DSD64→88.2k、DSD128→176.4k、DSD256→352.8k。</summary>
+    public static int PcmTarget(int srcSampleRate)
+    {
+        var factor = srcSampleRate > 0 ? (int)Math.Round(srcSampleRate / 44100.0) : 0;
+        return factor switch
+        {
+            8 or 64 => 88200,     // DSD64
+            16 or 128 => 176400,  // DSD128
+            32 or 256 => 352800,  // DSD256
+            _ => factor <= 8 ? 88200 : factor <= 16 ? 176400 : 352800,
+        };
+    }
+}
+
 /// <summary>
 /// 把「目标格式 + 设置 + 源信息」翻译成 ffmpeg 参数列表。
-/// 逻辑与 Python 端 transmusic/engine.py::build_command、Android 端 CommandBuilder.kt 严格一致，
+/// 逻辑与 Python 端 engine.build_command、Android 端 CommandBuilder.kt 严格一致，
 /// tests/parity_winui_test.py 会逐参数对比三端输出。
 /// </summary>
 public static class CommandBuilder
@@ -22,18 +59,31 @@ public static class CommandBuilder
     }
 
     /// <summary>返回 -ar 的取值；0 表示沿用源采样率。</summary>
-    public static int ResolveSampleRate(AudioFormat fmt, int request, int srcSampleRate)
+    public static int ResolveSampleRate(
+        AudioFormat fmt,
+        int request,
+        int srcSampleRate,
+        string srcCodec = "",
+        string? srcPath = null)
     {
         if (request > 0)
         {
             if (fmt.SampleRates.Count > 0 && !fmt.SampleRates.Contains(request)) return Nearest(fmt.SampleRates, request);
             return request;
         }
-        if (srcSampleRate > 0 && fmt.SampleRates.Count > 0 && !fmt.SampleRates.Contains(srcSampleRate))
+        if (srcSampleRate <= 0) return 0;
+
+        var target = srcSampleRate;
+        if (DsdSupport.IsDsdSource(srcCodec, srcSampleRate, srcPath))
         {
-            return Nearest(fmt.SampleRates, srcSampleRate);
+            // DSD 保持原样等于输出 352.8kHz 以上的巨量 PCM，默认降到 88.2kHz 系
+            target = DsdSupport.PcmTarget(srcSampleRate);
         }
-        return 0;
+        if (fmt.SampleRates.Count > 0 && !fmt.SampleRates.Contains(target))
+        {
+            target = Nearest(fmt.SampleRates, target);
+        }
+        return target == srcSampleRate ? 0 : target;
     }
 
     public static int ResolveChannels(AudioFormat fmt, int request)
@@ -112,7 +162,13 @@ public static class CommandBuilder
         if (fmt.Key == "opus") cmd.AddRange(new[] { "-compression_level", "10", "-application", "audio" });
 
         // ---- 采样率 / 声道 ----
-        var sr = ResolveSampleRate(fmt, settings.SampleRate, info.SampleRate);
+        var sr = ResolveSampleRate(fmt, settings.SampleRate, info.SampleRate, info.Codec, srcPath);
+        var dsd = DsdSupport.IsDsdSource(info.Codec, info.SampleRate, srcPath);
+        if (dsd && sr > 0 && sr <= 96000)
+        {
+            // DSD 的噪声整形集中在超声波段，降到低采样率 PCM 前先低通，避免混叠
+            cmd.AddRange(new[] { "-af", "lowpass=f=30000" });
+        }
         if (sr > 0) cmd.AddRange(new[] { "-ar", sr.ToString() });
         var ch = ResolveChannels(fmt, settings.Channels);
         if (ch > 0) cmd.AddRange(new[] { "-ac", ch.ToString() });

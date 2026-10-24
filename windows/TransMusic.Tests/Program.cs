@@ -59,6 +59,7 @@ public static class Program
         public int SrcSr { get; set; }
         public int SrcCh { get; set; }
         public int SrcCover { get; set; }
+        public string SrcCodec { get; set; } = string.Empty;
     }
 
     private static int RunParity(string? casesPath, string? outPath)
@@ -94,7 +95,7 @@ public static class Program
                 KeepMetadata = c.MetaValue == 1,
                 KeepCover = c.CoverValue == 1,
             };
-            var info = new MediaInfo { SampleRate = c.SrcSr, Channels = c.SrcCh, HasCover = c.SrcCover == 1 };
+            var info = new MediaInfo { SampleRate = c.SrcSr, Channels = c.SrcCh, HasCover = c.SrcCover == 1, Codec = c.SrcCodec };
             var args = CommandBuilder.Build(
                 "D:/音乐/in 1.mp3", "D:/out/out 1.flac", fmt, settings, info, reportProgress: false);
             result[c.Id] = args.ToArray();
@@ -136,6 +137,7 @@ public static class Program
         CheckCommandBuilder();
         CheckOutputResolver(work);
         ConvertMatrix(source, work);
+        CheckDsd(work);
         CancelTest(ffmpeg, work);
 
         Console.WriteLine();
@@ -180,7 +182,7 @@ public static class Program
     {
         Console.WriteLine("── 格式表");
         Check(Formats.Ordered.Count == 15, "15 种目标格式", $"实际 {Formats.Ordered.Count}");
-        Check(Presets.All.Count == 8, "8 个预设", $"实际 {Presets.All.Count}");
+        Check(Presets.All.Count == 11, "11 个预设（含 3 个 DSD 预设）", $"实际 {Presets.All.Count}");
         Check(Formats.Get("mp3").Codec == "libmp3lame", "mp3 编码器为 libmp3lame");
         Check(Formats.Get("flac").Lossless, "flac 标记为无损");
         Check(AudioExts.IsAudioLike("a.MP3") && AudioExts.IsAudioLike("b.flac") && !AudioExts.IsAudioLike("c.txt"),
@@ -339,6 +341,57 @@ public static class Program
 
         Check(failures.Count == 0, "15 种格式全部转换成功且可回读",
             failures.Count == 0 ? null : string.Join("; ", failures));
+    }
+
+    /// <summary>DSD 输入：.dsf 应被识别并降采样到 88.2k 系 PCM。</summary>
+    private static void CheckDsd(string work)
+    {
+        Console.WriteLine("── DSD 输入");
+        string? dsd = null;
+        foreach (var candidate in new[]
+                 {
+                     Path.Combine(Directory.GetCurrentDirectory(), "samples", "dsd64_test.dsf"),
+                     Path.Combine(Directory.GetCurrentDirectory(), "..", "samples", "dsd64_test.dsf"),
+                     Path.Combine(work, "dsd64_test.dsf"),
+                 })
+        {
+            if (File.Exists(candidate)) { dsd = Path.GetFullPath(candidate); break; }
+        }
+        if (dsd is null)
+        {
+            Console.WriteLine("  – 跳过（没有 samples/dsd64_test.dsf，可运行 tools/make_dsd_sample.py 生成）");
+            return;
+        }
+
+        var info = AudioProbe.Probe(dsd);
+        Check(DsdSupport.IsDsdSource(info.Codec, info.SampleRate, dsd), "DSD 源识别",
+            $"{info.Codec} {info.SampleRate}Hz");
+
+        var outDir = Path.Combine(work, "dsd");
+        Directory.CreateDirectory(outDir);
+        var cases = new[] { ("flac", 24, 88200), ("wav", 24, 88200), ("mp3", 0, 48000) };
+        foreach (var (key, depth, expectRate) in cases)
+        {
+            var fmt = Formats.Get(key);
+            var settings = new ConvertSettings
+            {
+                FormatKey = key,
+                Bitrate = 320,
+                BitDepth = depth,
+                CompLevel = fmt.CompLevels is null ? -1 : fmt.DefaultComp(),
+            };
+            var dst = Path.Combine(outDir, $"dsdout.{fmt.Ext}");
+            var args = CommandBuilder.Build(dsd, dst, fmt, settings, info);
+            var result = FfmpegRunner.RunAsync(args, info.DurationSeconds).GetAwaiter().GetResult();
+            if (!result.Ok)
+            {
+                Check(false, $"DSD → {key}", result.Message);
+                continue;
+            }
+            var probed = AudioProbe.Probe(dst);
+            Check(probed.SampleRate == expectRate, $"DSD → {key} 采样率 {expectRate}",
+                $"实际 {probed.SampleRate}");
+        }
     }
 
     private static void CancelTest(string ffmpeg, string work)

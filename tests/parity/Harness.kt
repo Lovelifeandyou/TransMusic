@@ -31,6 +31,7 @@ private class Case(val id: String) {
     var srcSr: Int = 0
     var srcCh: Int = 0
     var srcCover: Boolean = false
+    var srcCodec: String = ""
     var srcPath: String = ""
     var dstPath: String = ""
 }
@@ -69,6 +70,7 @@ fun main() {
                     "srcSr" -> case.srcSr = value.toIntOrNull() ?: 0
                     "srcCh" -> case.srcCh = value.toIntOrNull() ?: 0
                     "srcCover" -> case.srcCover = value == "1"
+                    "srcCodec" -> case.srcCodec = value
                     "srcPath" -> case.srcPath = value
                     "dstPath" -> case.dstPath = value
                 }
@@ -99,6 +101,7 @@ fun main() {
             sampleRate = case.srcSr,
             channels = case.srcCh,
             hasCover = case.srcCover,
+            codec = case.srcCodec,
         )
         val args = CommandBuilder.build(case.srcPath, case.dstPath, format, settings, info)
         for (arg in args) println("ARG $arg")

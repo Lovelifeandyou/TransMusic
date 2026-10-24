@@ -22,6 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.transmusic.converter.model.Formats
+import com.transmusic.converter.ui.theme.ThemeMode
 import com.transmusic.converter.model.Preset
 import com.transmusic.converter.model.Presets
 import kotlin.math.roundToInt
@@ -33,6 +34,8 @@ import kotlin.math.roundToInt
 @Composable
 fun SettingsSheet(
     state: ConvertSettingsState,
+    themeMode: ThemeMode,
+    onThemeModeChange: (ThemeMode) -> Unit,
     useMusicLibrary: Boolean,
     destinationLabel: String,
     onDestinationChange: (Boolean) -> Unit,
@@ -56,6 +59,16 @@ fun SettingsSheet(
         )
         Spacer(Modifier.height(14.dp))
 
+        SectionCard(title = "外观", subtitle = "浅色 / 深色 / 跟随系统") {
+            ChoiceChips(
+                options = ThemeMode.entries,
+                selected = themeMode,
+                label = { it.label },
+                onSelect = onThemeModeChange,
+            )
+        }
+
+        Spacer(Modifier.height(12.dp))
         SectionCard(title = "常用预设") {
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),

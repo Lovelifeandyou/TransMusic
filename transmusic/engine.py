@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable, Optional
 
-from .formats import KEEP, AudioFormat
+from .formats import DSD_EXTS, DSD_SOURCE_RATES, KEEP, AudioFormat
 
 SUBPROC_FLAGS = 0
 if os.name == "nt":  # 隐藏弹出黑框
@@ -321,15 +321,52 @@ def _nearest(values: tuple[int, ...], target: int) -> int:
     return min(values, key=lambda v: (abs(v - target), v))
 
 
-def resolve_sample_rate(fmt: AudioFormat, request: int, src_sr: int) -> int:
+def is_dsd_source(codec: str, sample_rate: int, path: str = "") -> bool:
+    """判断源文件是不是 DSD（.dsf/.dff）。ffmpeg 只能解、不能编码 DSD。"""
+    if (codec or "").lower().startswith("dsd"):
+        return True
+    if sample_rate in DSD_SOURCE_RATES:
+        return True
+    return path.lower().endswith(DSD_EXTS)
+
+
+def dsd_pcm_target(src_sr: int) -> int:
+    """DSD 源默认降到 PCM 常用倍频：DSD64→88.2k，DSD128→176.4k，DSD256→352.8k。
+
+    DSD 有两套采样率坐标，这里统一按 44.1kHz 的倍数换算：
+      · ffmpeg 解码后：352800(8x) / 705600(16x) / 1411200(32x)
+      · mutagen 报的原生 DSD 率：2822400(64x) / 5644800(128x) / 11289600(256x)
+    """
+    factor = round(src_sr / 44100) if src_sr else 0
+    table = {
+        8: 88200, 64: 88200,        # DSD64：ffmpeg 抽取后 8x / 原生 64x
+        16: 176400, 128: 176400,    # DSD128
+        32: 352800, 256: 352800,    # DSD256
+    }
+    if factor in table:
+        return table[factor]
+    if factor <= 8:
+        return 88200
+    if factor <= 16:
+        return 176400
+    return 352800
+
+
+def resolve_sample_rate(fmt: AudioFormat, request: int, src_sr: int, src_codec: str = "", src_path: str = "") -> int:
     """决定 -ar 的取值；返回 0 表示不指定（沿用源）。"""
     if request:
         if fmt.sample_rates and request not in fmt.sample_rates:
             return _nearest(fmt.sample_rates, request)
         return request
-    if src_sr and fmt.sample_rates and src_sr not in fmt.sample_rates:
-        return _nearest(fmt.sample_rates, src_sr)
-    return 0
+    if not src_sr:
+        return 0
+    target = src_sr
+    if is_dsd_source(src_codec, src_sr, src_path):
+        # DSD 保持原样等于直接输出 352.8kHz 以上的巨量 PCM，默认降到 88.2kHz 系
+        target = dsd_pcm_target(src_sr)
+    if fmt.sample_rates and target not in fmt.sample_rates:
+        target = _nearest(fmt.sample_rates, target)
+    return 0 if target == src_sr else target
 
 
 def resolve_channels(fmt: AudioFormat, request: int, src_ch: int) -> int:
@@ -408,7 +445,11 @@ def build_command(
         cmd += ["-compression_level", "10", "-application", "audio"]
 
     # ---- 采样率 / 声道 ----
-    sr = resolve_sample_rate(fmt, settings.sample_rate, info.sample_rate)
+    sr = resolve_sample_rate(fmt, settings.sample_rate, info.sample_rate, info.codec, str(src) if src else "")
+    dsd = is_dsd_source(info.codec, info.sample_rate, str(src) if src else "")
+    if dsd and sr and sr <= 96000:
+        # DSD 的噪声整形集中在超声波段，降到低采样率 PCM 前先低通，避免混叠
+        cmd += ["-af", "lowpass=f=30000"]
     if sr:
         cmd += ["-ar", str(sr)]
     ch = resolve_channels(fmt, settings.channels, info.channels)

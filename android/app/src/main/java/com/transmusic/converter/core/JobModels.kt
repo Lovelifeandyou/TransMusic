@@ -75,7 +75,11 @@ data class Job(
 
     val metaText: String
         get() {
-            val codec = info.codec.ifBlank { displayName.substringAfterLast('.', "").uppercase() }
+            val rawCodec = info.codec.ifBlank { displayName.substringAfterLast('.', "").uppercase() }
+            // ffmpeg 解 DSD 会报 dsd_lsbf_planar 之类，统一显示成 DSD
+            val codec = if (rawCodec.startsWith("dsd", ignoreCase = true) ||
+                rawCodec.equals("DSF", ignoreCase = true) || rawCodec.equals("DFF", ignoreCase = true)
+            ) "DSD" else rawCodec
             return listOf(codec, info.durationText, info.bitrateText, info.sampleRateText, info.channelsText)
                 .filter { it.isNotBlank() && it != "-" }
                 .joinToString(" · ")

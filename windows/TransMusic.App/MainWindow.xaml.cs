@@ -28,7 +28,8 @@ public sealed partial class MainWindow : Window
         ViewModel.PropertyChanged += (_, e) =>
         {
             if (e.PropertyName == nameof(ConvertViewModel.IsRunning)) UpdateRunningState();
-        };
+            };
+        // 注意：不能在构造期给根元素设 RequestedTheme —— 元素还没 Loaded 时会打断整棵树的渲染
 
         JobList.SelectionChanged += (_, _) => { };
 
@@ -61,7 +62,14 @@ public sealed partial class MainWindow : Window
             // 某些精简系统上 AppWindow 不可用，忽略即可
         }
 
-        // 界面固定深色，用实心深色背景，不跟随系统 Mica，避免浅色系统下割裂。
+        // 背景交给主题资源（CardBackgroundFillColorDefaultBrush 等），深浅色自动切换。
+    }
+
+    /// <summary>主题是应用级设置，切换后重启自身生效（避免半套主题）。</summary>
+    private void RestartForTheme()
+    {
+        ViewModel.SaveThemePreference();
+        App.RestartWithCurrentTheme();
     }
 
     // ------------------------------------------------------------------ 状态

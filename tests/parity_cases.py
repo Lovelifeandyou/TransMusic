@@ -21,10 +21,13 @@ SRC_PATH = "D:/音乐/in 1.mp3"
 DST_PATH = "D:/out/out 1.flac"
 
 SOURCES = {
-    "cd": {"srcSr": 44100, "srcCh": 2, "srcCover": False},
-    "hi": {"srcSr": 96000, "srcCh": 2, "srcCover": True},
-    "mono24": {"srcSr": 48000, "srcCh": 1, "srcCover": True},
-    "odd": {"srcSr": 32000, "srcCh": 6, "srcCover": False},
+    "cd": {"srcSr": 44100, "srcCh": 2, "srcCover": False, "srcCodec": "pcm_s16le"},
+    "hi": {"srcSr": 96000, "srcCh": 2, "srcCover": True, "srcCodec": "flac"},
+    "mono24": {"srcSr": 48000, "srcCh": 1, "srcCover": True, "srcCodec": "flac"},
+    "odd": {"srcSr": 32000, "srcCh": 6, "srcCover": False, "srcCodec": "ac3"},
+    # DSD：ffmpeg 解码后是 352800（DSD64），原生率是 2822400
+    "dsd64": {"srcSr": 352800, "srcCh": 2, "srcCover": False, "srcCodec": "dsd_lsbf_planar"},
+    "dsd128": {"srcSr": 705600, "srcCh": 2, "srcCover": False, "srcCodec": "dsd_msbf_planar"},
 }
 
 
@@ -105,6 +108,7 @@ def python_args(case: dict) -> list[str]:
         sample_rate=case["srcSr"],
         channels=case["srcCh"],
         has_cover=case["srcCover"],
+        codec=case.get("srcCodec", ""),
     )
     cmd = engine.build_command(
         engine.find_ffmpeg(), SRC_PATH, DST_PATH, fmt, settings, info,
@@ -129,6 +133,7 @@ def kotlin_protocol(cases: list[dict]) -> str:
         lines.append(f"srcSr={c['srcSr']}")
         lines.append(f"srcCh={c['srcCh']}")
         lines.append(f"srcCover={1 if c['srcCover'] else 0}")
+        lines.append(f"srcCodec={c.get('srcCodec', '')}")
         lines.append(f"srcPath={SRC_PATH}")
         lines.append(f"dstPath={DST_PATH}")
         lines.append("END")
@@ -151,6 +156,7 @@ def winui_json(cases: list[dict]) -> str:
             "srcSr": c["srcSr"],
             "srcCh": c["srcCh"],
             "srcCover": 1 if c["srcCover"] else 0,
+            "srcCodec": c.get("srcCodec", ""),
         }
         for c in cases
     ]

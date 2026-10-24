@@ -83,6 +83,15 @@ fun TransMusicTheme(content: @Composable () -> Unit) =
 
 界面层已经把所有样式收敛到 `ui/theme/Theme.kt` 与 `ui/Expressive.kt`，换官方组件只需要改这两处。
 
+## 二之二、DSD 输入与外观
+
+- **DSD（.dsf/.dff）**：FFmpegKit 自带 DSD 解码器，App 会按 `DsdSupport` 把 DSD64/128/256 降到
+  88.2k / 176.4k / 352.8k 的 PCM 并在降采样前加 `lowpass=f=30000`；DSD 只作输入（ffmpeg 无 DSD 编码器）。
+- **明暗主题**：设置面板「外观」三选（跟随系统 / 浅色 / 深色），存 `Prefs.themeMode`，
+  Compose 即时重组；系统栏图标颜色随主题切换（`SystemBarStyle.dark/light`）。
+- **封面预览**：列表项用 `JobCover` 从 `MediaMetadataRetriever.embeddedPicture` 取内嵌封面，
+  无封面时显示音符占位。
+
 ## 三、依赖说明
 
 转码引擎用 **FFmpegKit（audio 包）**，自带 lame / libopus / libvorbis / libspeex / wavpack / opencore-amr / twolame 等编码库，

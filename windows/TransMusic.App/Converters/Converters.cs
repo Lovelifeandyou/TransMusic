@@ -26,6 +26,38 @@ public sealed class InverseBoolConverter : IValueConverter
         => value is not true;
 }
 
+/// <summary>bool 取反 → Visibility（无封面时显示占位图标）。</summary>
+public sealed class InverseBoolToVisibilityConverter : IValueConverter
+{
+    public object Convert(object value, Type targetType, object parameter, string language)
+        => value is true ? Visibility.Collapsed : Visibility.Visible;
+
+    public object ConvertBack(object value, Type targetType, object parameter, string language)
+        => value is Visibility.Collapsed;
+}
+
+/// <summary>封面缓存文件路径 → 可显示的图片。</summary>
+public sealed class PathToImageConverter : IValueConverter
+{
+    public object? Convert(object value, Type targetType, object parameter, string language)
+    {
+        if (value is not string path || string.IsNullOrWhiteSpace(path) || !File.Exists(path)) return null;
+        try
+        {
+            var bitmap = new Microsoft.UI.Xaml.Media.Imaging.BitmapImage(new Uri(path));
+            bitmap.DecodePixelWidth = 96;   // 缩略图，省内存
+            return bitmap;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    public object ConvertBack(object value, Type targetType, object parameter, string language)
+        => throw new NotSupportedException();
+}
+
 /// <summary>任务状态 → 状态色（与其它端一致的语义色）。</summary>
 public sealed class StatusBrushConverter : IValueConverter
 {

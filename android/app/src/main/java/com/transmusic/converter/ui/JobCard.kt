@@ -24,15 +24,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.transmusic.converter.core.Job
 import com.transmusic.converter.core.JobStatus
-import com.transmusic.converter.ui.theme.AccentError
-import com.transmusic.converter.ui.theme.AccentOk
-import com.transmusic.converter.ui.theme.AccentWarn
+import com.transmusic.converter.ui.theme.statusError
+import com.transmusic.converter.ui.theme.statusMuted
+import com.transmusic.converter.ui.theme.statusOk
+import com.transmusic.converter.ui.theme.statusWarn
 
-/** 单条转换任务的卡片：文件名 / 编码信息 / 状态 / 进度。 */
+/** 单条转换任务的卡片：封面缩略图 + 文件名 / 编码信息 / 状态 / 进度。 */
 @Composable
 fun JobCard(job: Job, onClick: () -> Unit) {
     val colors = MaterialTheme.colorScheme
-    val accent = statusColor(job.status, colors.primary)
+    val accent = statusColor(job.status)
     val showProgress = job.status == JobStatus.RUNNING || job.status == JobStatus.DONE
     val progress = when (job.status) {
         JobStatus.DONE -> 1f
@@ -49,60 +50,69 @@ fun JobCard(job: Job, onClick: () -> Unit) {
         color = colors.surfaceContainerLow,
         border = BorderStroke(1.dp, colors.outlineVariant),
     ) {
-        Column(Modifier.padding(horizontal = 14.dp, vertical = 12.dp)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = job.displayName,
-                    style = MaterialTheme.typography.titleMedium,
-                    color = colors.onSurface,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.weight(1f),
-                )
-                Spacer(Modifier.width(8.dp))
-                if (job.status == JobStatus.RUNNING) {
-                    PulsingDot(color = accent)
-                    Spacer(Modifier.width(6.dp))
-                }
-                StatusPill(text = statusText(job), color = accent)
-            }
-            Spacer(Modifier.height(3.dp))
-            Text(
-                text = job.metaText,
-                style = MaterialTheme.typography.bodySmall,
-                color = colors.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            if (showProgress) {
-                Spacer(Modifier.height(10.dp))
+        Row(
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            // 曲目封面缩略图（无封面时显示音符占位）
+            JobCover(uri = job.uri, size = 52.dp)
+            Spacer(Modifier.width(12.dp))
+
+            Column(Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    LinearProgressIndicator(
-                        progress = { progress },
-                        modifier = Modifier
-                            .weight(1f)
-                            .height(6.dp)
-                            .clip(CircleShape),
-                        color = accent,
-                        trackColor = colors.surfaceContainerHighest,
-                    )
-                    Spacer(Modifier.width(10.dp))
                     Text(
-                        text = "${(progress * 100).toInt()}%",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = accent,
+                        text = job.displayName,
+                        style = MaterialTheme.typography.titleMedium,
+                        color = colors.onSurface,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.weight(1f),
                     )
+                    Spacer(Modifier.width(8.dp))
+                    if (job.status == JobStatus.RUNNING) {
+                        PulsingDot(color = accent)
+                        Spacer(Modifier.width(6.dp))
+                    }
+                    StatusPill(text = statusText(job), color = accent)
                 }
-            }
-            if (job.status == JobStatus.DONE && job.message.isNotBlank()) {
-                Spacer(Modifier.height(6.dp))
+                Spacer(Modifier.height(3.dp))
                 Text(
-                    text = "→ ${job.message}",
+                    text = job.metaText,
                     style = MaterialTheme.typography.bodySmall,
                     color = colors.onSurfaceVariant,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                 )
+                if (showProgress) {
+                    Spacer(Modifier.height(8.dp))
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        LinearProgressIndicator(
+                            progress = { progress },
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(6.dp)
+                                .clip(CircleShape),
+                            color = accent,
+                            trackColor = colors.surfaceContainerHighest,
+                        )
+                        Spacer(Modifier.width(10.dp))
+                        Text(
+                            text = "${(progress * 100).toInt()}%",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = accent,
+                        )
+                    }
+                }
+                if (job.status == JobStatus.DONE && job.message.isNotBlank()) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        text = "→ ${job.message}",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = colors.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
             }
         }
     }
@@ -117,15 +127,17 @@ private fun statusText(job: Job): String = when (job.status) {
     JobStatus.CANCELED -> "已取消"
 }
 
-private fun statusColor(status: JobStatus, primary: Color): Color = when (status) {
-    JobStatus.DONE -> AccentOk
-    JobStatus.FAILED -> AccentError
-    JobStatus.SKIPPED -> AccentWarn
-    JobStatus.RUNNING -> primary
-    else -> AccentWarn
+@Composable
+private fun statusColor(status: JobStatus): Color = when (status) {
+    JobStatus.DONE -> statusOk()
+    JobStatus.FAILED -> statusError()
+    JobStatus.SKIPPED -> statusWarn()
+    JobStatus.RUNNING -> MaterialTheme.colorScheme.primary
+    JobStatus.CANCELED -> statusMuted()
+    else -> statusWarn()
 }
 
-/** 空列表时的引导（大图标 + 两行说明）。 */
+/** 空列表时的引导（大标题 + 两行说明）。 */
 @Composable
 fun EmptyHint(modifier: Modifier = Modifier) {
     Column(
@@ -140,7 +152,7 @@ fun EmptyHint(modifier: Modifier = Modifier) {
         )
         Spacer(Modifier.height(8.dp))
         Text(
-            text = "点右上角「＋」选择音频或视频\nMP3 · FLAC · WAV · AAC · ALAC · OGG · Opus · WMA · AIFF · WV · AC3",
+            text = "点右上角「＋」选择音频或视频\nMP3 · FLAC · WAV · AAC · ALAC · OGG · Opus · WMA · AIFF · WV · DSD · AC3",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             maxLines = 4,

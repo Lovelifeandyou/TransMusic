@@ -42,4 +42,9 @@ class Prefs(context: Context) {
     var template: String
         get() = sp.getString("template", "{name}") ?: "{name}"
         set(value) = sp.edit().putString("template", value).apply()
+
+    /** 主题模式：0=跟随系统，1=浅色，2=深色（见 ui/theme/ThemeMode）。 */
+    var themeMode: Int
+        get() = sp.getInt("themeMode", 0)
+        set(value) = sp.edit().putInt("themeMode", value).apply()
 }

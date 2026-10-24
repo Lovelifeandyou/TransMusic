@@ -7,7 +7,13 @@
 同一份源文件在任意端都会得到**完全相同的 ffmpeg 编码参数**（236 个用例逐条自动化对齐）。
 
 支持互转：**MP3 · AAC/M4A · ALAC/M4A · FLAC · WAV · AIFF · OGG Vorbis · Opus · WMA · WavPack · TTA · AC3 · E-AC3 · MP2 · Speex**（15 种输出）。
-输入只要是 ffmpeg 能解码的都行，**视频文件也能只抽音轨**。
+输入只要是 ffmpeg 能解码的都行，**DSD 与视频文件也能直接转**：
+
+- **DSD（.dsf / .dff）**：DSD64 / DSD128 / DSD256 都能读入，自动降到 88.2kHz 系的 PCM
+  （DSD64→88.2k、DSD128→176.4k、DSD256→352.8k），并在降采样前加 30kHz 低通抑制超声波噪声混叠。
+  > ffmpeg 只有 DSD **解码器**，没有 DSD 编码器/muxer，所以 DSD 只作为输入，不能作为输出目标。
+  > 内置 3 个配套预设：`DSD → FLAC 归档`、`DSD → WAV 24bit`、`DSD → MP3 320`。
+- 视频文件（MP4/MKV/MOV/FLV/WebM…）自动只取音轨。
 
 ![Windows 版界面](docs/windows-winui3.png)
 
@@ -58,13 +64,16 @@ CN=TransMusic, OU=Converter, O=TransMusic, L=Beijing, ST=Beijing, C=CN
 - 8 个常用预设：MP3 320 通用、MP3 V0 高音质、FLAC 无损归档、FLAC 24bit 母带、CD 级 WAV、AAC 256 手机、Opus 48k 语音、铃声片段参数
 - 批量队列 + 并发；单个任务可取消（立即终止 ffmpeg 并删除半成品）
 - 默认保留标签与内嵌封面；文件名模板 `{name} {artist} {title} {album} {index} {ext}`、重名策略（重命名 / 覆盖 / 跳过）
-- 拖入视频文件只取音轨
+- 拖入视频文件只取音轨；**DSD 输入**自动降采样并低通
+- 列表**预览专辑封面**；**浅色 / 深色 / 跟随系统**三种外观
 
 平台差异：
 
 | | Windows（WinUI 3） | Android（Compose / MD3E） |
 | --- | --- | --- |
-| 界面 | 自绘标题栏、任务卡列表、右侧设置侧栏、Fluent 深色 | 大色块 + 大圆角、Expressive 字体、弹簧动效、BottomSheet 设置、动态取色 |
+| 界面 | 自绘标题栏、任务卡列表（含封面缩略图）、右侧设置侧栏、Fluent 深浅双主题 | 大色块 + 大圆角、Expressive 字体、弹簧动效、BottomSheet 设置、动态取色 |
+| 主题 | 跟随系统 / 浅色 / 深色（应用级，切换后自动重启生效） | 跟随系统 / 浅色 / 深色（Compose 运行时切换，即时生效） |
+| 封面 | 用 ffmpeg 提取内嵌封面 → 缓存成 png 显示在列表 | 用 MediaMetadataRetriever 取内嵌封面显示在列表 |
 | 入口 | 拖放 / 选择文件 / `TransMusic.exe D:\Music` / 发送到 | SAF 文件选择 / 分享打开 |
 | 并发 | 1–16 | 1–8 |
 | 输出 | 源目录或指定目录 | `Music/TransMusic`（媒体库）或任选文件夹 |

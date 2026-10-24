@@ -298,6 +298,45 @@ public static class Presets
     {
         new Preset
         {
+            Key = "dsd_flac",
+            Label = "DSD → FLAC 归档",
+            FormatKey = "flac",
+            Bitrate = 0,
+            VbrIndex = -1,
+            SampleRate = 88200,
+            Channels = 0,
+            BitDepth = 24,
+            CompLevel = 8,
+            Hint = "把 .dsf/.dff 解成 88.2kHz/24bit 无损；DSD128 建议手动改 176.4kHz",
+        },
+        new Preset
+        {
+            Key = "dsd_wav",
+            Label = "DSD → WAV 24bit",
+            FormatKey = "wav",
+            Bitrate = 0,
+            VbrIndex = -1,
+            SampleRate = 88200,
+            Channels = 0,
+            BitDepth = 24,
+            CompLevel = -1,
+            Hint = "给不支持 DSD 的播放器/音频编辑器",
+        },
+        new Preset
+        {
+            Key = "dsd_mp3",
+            Label = "DSD → MP3 320",
+            FormatKey = "mp3",
+            Bitrate = 320,
+            VbrIndex = -1,
+            SampleRate = 0,
+            Channels = 0,
+            BitDepth = 0,
+            CompLevel = -1,
+            Hint = "车载与便携播放器通用",
+        },
+        new Preset
+        {
             Key = "hq_mp3",
             Label = "MP3 320 通用",
             FormatKey = "mp3",

@@ -17,6 +17,9 @@ public sealed class AppSettings
     public string Template { get; set; } = "{name}";
     public string Conflict { get; set; } = "rename";
     public bool SameAsSource { get; set; } = true;
+
+    /// <summary>0=跟随系统，1=浅色，2=深色。</summary>
+    public int ThemeMode { get; set; }
     public string OutputDir { get; set; } = string.Empty;
 
     private static readonly JsonSerializerOptions JsonOptions = new()

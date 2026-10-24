@@ -95,7 +95,11 @@ import java.util.Locale
  * MD3E 主界面：大标题 + 输出摘要卡（大色块）+ 任务卡列表 + 底部主按钮 + 设置 BottomSheet。
  */
 @Composable
-fun ConvertScreen(viewModel: ConvertViewModel) {
+fun ConvertScreen(
+    viewModel: ConvertViewModel,
+    themeMode: com.transmusic.converter.ui.theme.ThemeMode = com.transmusic.converter.ui.theme.ThemeMode.System,
+    onThemeModeChange: (com.transmusic.converter.ui.theme.ThemeMode) -> Unit = {},
+) {
     val context = LocalContext.current
     val jobs by viewModel.jobs.collectAsStateWithLifecycle()
     val running by viewModel.running.collectAsStateWithLifecycle()
@@ -264,6 +268,8 @@ fun ConvertScreen(viewModel: ConvertViewModel) {
         ) {
             SettingsSheet(
                 state = state,
+                themeMode = themeMode,
+                onThemeModeChange = onThemeModeChange,
                 useMusicLibrary = destination is Destination.MusicLibrary,
                 destinationLabel = if (destination is Destination.MusicLibrary) {
                     "Music/TransMusic（系统媒体库）"

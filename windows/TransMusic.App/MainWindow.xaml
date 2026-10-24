@@ -10,12 +10,14 @@
     mc:Ignorable="d">
 
     <Grid x:Name="RootGrid" AllowDrop="True" DragOver="OnDragOver" Drop="OnDrop"
-          RequestedTheme="Dark" Background="#0D0F14">
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.Resources>
             <conv:BoolToVisibilityConverter x:Key="BoolToVisibility" />
             <conv:InverseBoolConverter x:Key="InverseBool" />
             <conv:StatusBrushConverter x:Key="StatusBrush" />
+            <conv:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibility" />
+            <conv:PathToImageConverter x:Key="CoverImage" />
         </Grid.Resources>
 
         <Grid.RowDefinitions>
@@ -72,7 +74,26 @@
                               Padding="0,4,0,4" DoubleTapped="OnJobDoubleTapped">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid Padding="8,6" RowSpacing="3">
+                                <Grid Padding="8,6" ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- 曲目封面缩略图（无封面时显示音符占位） -->
+                                    <Border Width="44" Height="44" CornerRadius="8"
+                                            Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+                                        <Grid>
+                                            <Image Source="{Binding CoverPath, Converter={StaticResource CoverImage}}"
+                                                   Stretch="UniformToFill" />
+                                            <TextBlock Text="♪" FontSize="18" HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center"
+                                                       Visibility="{Binding HasCoverImage, Converter={StaticResource InverseBoolToVisibility}}"
+                                                       Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                        </Grid>
+                                    </Border>
+
+                                    <Grid Grid.Column="1" RowSpacing="3">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto" />
                                         <RowDefinition Height="Auto" />
@@ -105,6 +126,7 @@
                                         <TextBlock Grid.Column="1" Text="{Binding ProgressText}"
                                                    FontSize="11" VerticalAlignment="Center"
                                                    Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                    </Grid>
                                     </Grid>
                                 </Grid>
                             </DataTemplate>
@@ -148,6 +170,13 @@
                                        TextTrimming="CharacterEllipsis" MaxLines="1" />
                         </StackPanel>
                     </Border>
+
+                    <ComboBox x:Name="ThemeBox" Header="外观" HorizontalAlignment="Stretch"
+                              SelectedIndex="{Binding ThemeModeIndex, Mode=TwoWay}">
+                        <ComboBoxItem Content="跟随系统" />
+                        <ComboBoxItem Content="浅色" />
+                        <ComboBoxItem Content="深色" />
+                    </ComboBox>
 
                     <ComboBox x:Name="FormatBox" Header="目标格式" HorizontalAlignment="Stretch"
                               ItemsSource="{Binding Formats}" DisplayMemberPath="Display"
