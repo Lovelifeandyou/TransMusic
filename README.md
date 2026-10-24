@@ -4,7 +4,7 @@
 
 **Windows（WinUI 3）+ Android（Material 3 Expressive / Jetpack Compose）** 双端音频格式互转工具，
 另附一套 Python 命令行工具作为批量引擎与测试基准。三端共用同一份格式定义，
-同一份源文件在任意端都会得到**完全相同的 ffmpeg 编码参数**（236 个用例逐条自动化对齐）。
+同一份源文件在任意端都会得到**完全相同的 ffmpeg 编码参数**（354 个用例逐条自动化对齐）。
 
 支持互转：**MP3 · AAC/M4A · ALAC/M4A · FLAC · WAV · AIFF · OGG Vorbis · Opus · WMA · WavPack · TTA · AC3 · E-AC3 · MP2 · Speex**（15 种输出）。
 输入只要是 ffmpeg 能解码的都行，**DSD 与视频文件也能直接转**：
@@ -126,8 +126,9 @@ apksigner sign --ks release.jks --out TransMusic-android-arm.apk app-release-uns
 
 ```bash
 python tests/smoke_test.py                # Python 引擎：15 格式矩阵、互转链、标签封面、取消、进度
-python tests/parity_winui_test.py         # C# vs Python：236 用例逐参数 diff
-python tests/parity_test.py               # Kotlin vs Python：236 用例逐参数 diff（需 tools/kotlinc）
+python tests/parity_winui_test.py         # C# vs Python：354 用例逐参数 diff
+cd android && gradle testDebugUnitTest    # Android：354 用例一致性 + 11 项引擎单测（无需模拟器）
+python tests/parity_test.py               # 备选：kotlinc 单独跑 Kotlin 对比（需 tools/kotlinc）
 python tests/winui_check.py               # WinUI 工程静态检查（XAML/绑定/事件/csproj/格式表漂移）
 python tests/android_check.py             # Android 工程静态检查（XML/R 资源/包名/依赖/格式表漂移）
 python tests/kotlin_syntax_check.py       # Kotlin 语法级编译
@@ -136,7 +137,7 @@ python tests/kotlin_syntax_check.py       # Kotlin 语法级编译
 cd windows && dotnet run --project TransMusic.Tests -- selftest --ffmpeg <ffmpeg 路径>
 ```
 
-当前状态：上述全部通过（C# 引擎自检 34/34，两端参数一致性各 236/236）。
+当前状态：上述全部通过 —— C# 引擎自检 38/38（含 DSD 实测）、三端参数一致性各 354/354（Windows 用 dotnet、Android 用 Gradle 单测，期望值均由 Python 引擎生成）、Android 引擎单测 11/11。
 
 ---
 

@@ -49,7 +49,10 @@ def compile_harness(force: bool = False) -> None:
     if not KOTLINC.exists():
         raise SystemExit(
             f"缺少 Kotlin 编译器：{KOTLINC}\n"
-            "  下载 kotlin-compiler 解压到 tools/kotlinc 即可（仅改动 Kotlin 源码后需要重编）"
+            "  Android 端 354 用例一致性已由 Gradle 单测覆盖，无需 kotlinc：\n"
+        "      cd android && gradle testDebugUnitTest\n"
+        "  期望值来源：python tools/gen_android_parity_cases.py\n"
+        "  仍想用本方案：下载 kotlin-compiler 解压到 tools/kotlinc"
         )
     print("编译 Android 端 CommandBuilder（kotlinc）…")
     cmd = [str(KOTLINC), "-nowarn", "-include-runtime", "-d", str(JAR)] + [str(s) for s in sources]
