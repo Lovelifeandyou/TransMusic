@@ -7,6 +7,7 @@ import android.media.MediaMetadataRetriever
 import android.net.Uri
 import android.provider.MediaStore
 import com.transmusic.converter.core.MediaInfo
+import com.transmusic.converter.model.ProbePolicy
 
 /** 读取时长 / 码率 / 采样率 / 声道 / 编码 / 封面信息（不复制文件）。 */
 object AudioProbe {
@@ -101,7 +102,9 @@ object AudioProbe {
             if (size > 0) bitrate = (size * 8 / (durationMs / 1000.0)).toInt()
         }
 
-        val ok = error.isEmpty() && (durationMs > 0 || sampleRate > 0)
+        // 系统解析不了不代表 ffmpeg 不能解（DSD / APE / 部分 WMA 都会走到这里）
+        val systemParsed = error.isEmpty() && (durationMs > 0 || sampleRate > 0)
+        val ok = ProbePolicy.shouldAccept(systemParsed, displayName)
         return MediaInfo(
             durationMs = durationMs,
             bitrate = bitrate,

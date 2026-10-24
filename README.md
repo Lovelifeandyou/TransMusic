@@ -11,7 +11,13 @@
 
 - **DSD（.dsf / .dff）**：DSD64 / DSD128 / DSD256 都能读入，自动降到 88.2kHz 系的 PCM
   （DSD64→88.2k、DSD128→176.4k、DSD256→352.8k），并在降采样前加 30kHz 低通抑制超声波噪声混叠。
-  > ffmpeg 只有 DSD **解码器**，没有 DSD 编码器/muxer，所以 DSD 只作为输入，不能作为输出目标。
+  > **为什么不能输出 .dsf/.dff**：ffmpeg 只有 DSD **解码器**（dsd_lsbf/msbf），既没有 DSD 编码器，
+  > 也没有 dsf/dff 的 muxer —— 实测 fmpeg -c:a dsd_lsbf -f dsf out.dsf 会报
+  > Requested output format 'dsf' is not known。所以 DSD 只能作为输入，转出 PCM 格式。
+  > 需要 PCM→DSD 得另配 SoX 之类工具链。
+  >
+  > 另外：Android 系统的 MediaMetadataRetriever 不认识 .dsf/.dff，App 会按扩展名放行交给 ffmpeg 处理
+  > （ProbePolicy），DSD64 默认降到 88.2kHz；DSD128/256 建议在设置里手动把采样率选成 176.4k / 352.8k。
   > 内置 3 个配套预设：`DSD → FLAC 归档`、`DSD → WAV 24bit`、`DSD → MP3 320`。
 - 视频文件（MP4/MKV/MOV/FLV/WebM…）自动只取音轨。
 

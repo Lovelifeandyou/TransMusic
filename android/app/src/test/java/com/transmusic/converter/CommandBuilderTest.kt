@@ -118,6 +118,20 @@ class CommandBuilderTest {
     }
 
     @Test
+    fun probePolicyAcceptsFormatsSystemCannotParse() {
+        // 系统解不了但 ffmpeg 能解：DSD / APE
+        assertTrue(com.transmusic.converter.model.ProbePolicy.shouldAccept(false, "album.dsf"))
+        assertTrue(com.transmusic.converter.model.ProbePolicy.shouldAccept(false, "TRACK.DFF"))
+        assertTrue(com.transmusic.converter.model.ProbePolicy.shouldAccept(false, "song.ape"))
+        assertTrue(com.transmusic.converter.model.ProbePolicy.shouldAccept(false, "old.wma"))
+        // 系统能解析：任何格式都放行
+        assertTrue(com.transmusic.converter.model.ProbePolicy.shouldAccept(true, "a.mp3"))
+        // 完全无关的扩展名且系统解不了：拒绝
+        assertFalse(com.transmusic.converter.model.ProbePolicy.shouldAccept(false, "notes.txt"))
+        assertFalse(com.transmusic.converter.model.ProbePolicy.shouldAccept(false, null))
+    }
+
+    @Test
     fun formatsTableIsComplete() {
         assertEquals(15, Formats.ORDERED.size)
         assertEquals(11, com.transmusic.converter.model.Presets.ALL.size)
