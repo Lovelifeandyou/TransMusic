@@ -1,114 +1,171 @@
-# 音频格式转换器 · TransMusic
+# 音频格式转换器 · TransMusic 1.0.0
 
-**Windows（WinUI 3）+ Android（MD3E / Jetpack Compose）** 双端音频格式互转工具，外加一套 Python 命令行工具作为批量引擎与测试基准。
-三端共用同一份格式与参数定义，同一份源文件在任意端都会得到**完全相同的 ffmpeg 编码参数**（有自动化测试逐条守着）。
+**Windows（WinUI 3）+ Android（Material 3 Expressive / Jetpack Compose）** 双端音频格式互转工具，
+另附一套 Python 命令行工具作为批量引擎与测试基准。三端共用同一份格式定义，
+同一份源文件在任意端都会得到**完全相同的 ffmpeg 编码参数**（236 个用例逐条自动化对齐）。
 
-| 平台 | 形态 | 引擎 | 状态 |
-| --- | --- | --- | --- |
-| Windows 10/11 | **WinUI 3 原生应用**（C# / .NET 8 / Windows App SDK） | 内置 ffmpeg 7.1 | ✅ 已构建、已实际运行验证 |
-| Android 7.0+ | **原生 App**（Kotlin + MD3E / Jetpack Compose） | FFmpegKit（audio） | ✅ 工程完整，静态检查 + 参数一致性通过 |
-| 任意平台 | Python 命令行（批量、脚本化） | ffmpeg 7.1 | ✅ 已实测 |
+支持互转：**MP3 · AAC/M4A · ALAC/M4A · FLAC · WAV · AIFF · OGG Vorbis · Opus · WMA · WavPack · TTA · AC3 · E-AC3 · MP2 · Speex**（15 种输出）。
+输入只要是 ffmpeg 能解码的都行，**视频文件也能只抽音轨**。
 
 ![Windows 版界面](docs/windows-winui3.png)
 
-支持互转的格式：**MP3 · AAC/M4A · ALAC/M4A · FLAC · WAV · AIFF · OGG Vorbis · Opus · WMA · WavPack · TTA · AC3 · E-AC3 · MP2 · Speex**（15 种输出）。
-输入只要是 ffmpeg 能解码的就行，**视频文件也能只抽音轨**。
+---
+
+## 一、下载与安装
+
+发布页的 3 个文件：
+
+| 文件 | 适用 | 说明 |
+| --- | --- | --- |
+| `TransMusic-windows-x64.zip` | Windows 10 1809+ / 11 (x64) | 约 60 MB，解压后双击 `TransMusic.exe`，**免安装**、内置 ffmpeg |
+| `TransMusic-android-arm-v1.0.0.apk` | Android 7.0+（arm64-v8a / armeabi-v7a） | 约 28 MB，自签名，需允许「安装未知来源应用」 |
+| `TransMusic-src-v1.0.0.zip` | 开发者 | 全部源码（不含构建产物） |
+
+校验：`SHA256SUMS.txt` 里是各文件的 SHA-256。
+
+### Windows
+
+1. 解压 `TransMusic-windows-x64.zip` 到任意目录（路径别用中文层级太深的也行，程序已声明 longPathAware）。
+2. 双击 `TransMusic.exe`。
+3. 首次启动若 Windows 弹出 SmartScreen 提示，选择「更多信息 → 仍要运行」（未签名应用属正常现象）。
+
+程序自带 `ffmpeg\ffmpeg.exe`、`resources.pri` 与 Windows App SDK 运行时文件，**不需要**另外装 .NET 或 ffmpeg。
+
+### Android
+
+1. 传输 APK 到手机，点击安装；系统提示时允许该来源安装应用。
+2. 打开「音频格式转换器」，点右上角「＋」选择音频/视频，或直接拖入。
+3. 默认输出到 `Music/TransMusic`（Android 10+ 无需存储权限）；也可在设置里改选任意文件夹。
+
+APK 签名指纹（SHA-256）：
+
+```
+CN=TransMusic, OU=Converter, O=TransMusic, L=Beijing, ST=Beijing, C=CN
+8F:C4:C9:F7:70:FE:1A:24:BD:59:05:80:FF:3E:E8:CC:4B:47:7D:68:6C:ED:2F:A8:38:D4:15:59:8F:89:B2:C6
+```
+
+之后自行重新打包时请复用同一个 keystore（`transmusic-release.jks` 不随源码分发），否则无法覆盖安装。
 
 ---
 
-## 一、Windows 版（WinUI 3）
+## 二、功能
 
-**直接用**：双击 `windows\publish\TransMusic.exe`（免安装，内置 ffmpeg 与 Windows App SDK 运行时）。
+三端一致：
 
-- 拖拽文件/文件夹进窗口，或「添加文件/文件夹」；支持把文件拖到 exe 上直接打开
-- 批量队列、并发 1–16、逐条进度、随时取消（杀 ffmpeg 进程 + 删半成品）
-- 15 种格式 × 质量/位深/压缩级别联动，8 个预设，文件名模板，重名策略
-- 默认保留标签与内嵌封面；双击任务看完整详情；参数自动记住
+- 15 种目标格式，质量参数随格式联动（CBR 码率 / VBR 档位 / 无损位深 16-24-32 / 压缩级别）
+- 8 个常用预设：MP3 320 通用、MP3 V0 高音质、FLAC 无损归档、FLAC 24bit 母带、CD 级 WAV、AAC 256 手机、Opus 48k 语音、铃声片段参数
+- 批量队列 + 并发；单个任务可取消（立即终止 ffmpeg 并删除半成品）
+- 默认保留标签与内嵌封面；文件名模板 `{name} {artist} {title} {album} {index} {ext}`、重名策略（重命名 / 覆盖 / 跳过）
+- 拖入视频文件只取音轨
 
-构建与发布细节见 **[BUILD-WINDOWS.md](BUILD-WINDOWS.md)**（含「没有 Visual Studio 也能构建」的关键配置）。
+平台差异：
 
-## 二、Android 版（MD3E 前端）
+| | Windows（WinUI 3） | Android（Compose / MD3E） |
+| --- | --- | --- |
+| 界面 | 自绘标题栏、任务卡列表、右侧设置侧栏、Fluent 深色 | 大色块 + 大圆角、Expressive 字体、弹簧动效、BottomSheet 设置、动态取色 |
+| 入口 | 拖放 / 选择文件 / `TransMusic.exe D:\Music` / 发送到 | SAF 文件选择 / 分享打开 |
+| 并发 | 1–16 | 1–8 |
+| 输出 | 源目录或指定目录 | `Music/TransMusic`（媒体库）或任选文件夹 |
+| 附加 | 双击看详情、参数记忆、日志面板 | 长按任务看详情、参数记忆 |
 
-原生 Kotlin + **Jetpack Compose**，界面按 **MD3E（Material Design 3 Expressive）** 实现，工程在 `android/`。
-构建步骤见 **[BUILD-ANDROID.md](BUILD-ANDROID.md)**。
+---
 
-- 同样 15 种输出格式、同样的质量档位与预设
-- MD3E 视觉：大色块 + 26–34dp 圆角容器、Expressive 字体、弹簧动效、胶囊选项组、BottomSheet 设置面板、动态取色
-- 1–8 并发、单任务取消、写 `Music/TransMusic`（Android 10+ 免存储权限）或任选文件夹、保留标签与封面
-
-## 三、Python 命令行（批量 / 脚本）
+## 三、命令行（Python，任意平台）
 
 ```bash
-python main.py --list-formats                      # 全部格式与可用参数
-python main.py -f flac -o D:\out song.mp3
-python main.py -f m4a_aac -b 256 D:\Music          # 整目录递归
+pip install mutagen imageio-ffmpeg      # 或自备 ffmpeg 并设置 TRANSMUSIC_FFMPEG
+
+python main.py --list-formats                          # 全部格式与可用参数
+python main.py -f flac -o D:\out song.mp3              # 单文件
+python main.py -f m4a_aac -b 256 D:\Music              # 整目录递归
 python main.py -f mp3 --vbr 0 --template "{artist} - {title}" E:\CD
 python main.py -f wav --bit-depth 24 --sr 96000 --ch 2 in.flac
-python main.py -f opus -j 4 -n "D:\in"             # -n 只打印命令不执行
+python main.py -f opus -j 4 -n D:\in                   # -n 只打印命令不执行
 ```
 
-## 四、三端如何保持一致
+---
 
-1. **单一数据源**：`transmusic/formats.py` 定义全部格式/码率/位深/压缩级别/预设。
-   - → Android：`tools/gen_android_formats.py` 生成 `model/Formats.kt`
-   - → Windows：`tools/gen_winui_formats.py` 生成 `TransMusic.Core/Formats.Generated.cs`
-2. **命令构造逐行对齐**：`engine.py::build_command` / `CommandBuilder.kt` / `CommandBuilder.cs` 三个实现分支一一对应
-   （CBR/VBR、位深→`-sample_fmt`、压缩级别、采样率吸附、声道上限、封面 `attached_pic`、标签映射、mp3 的 ID3 选项）。
-3. **自动化对比**：同一批 236 个用例（15 格式 × 多组参数 × 4 种源特征）分别喂给 C# 与 Kotlin 实现，
-   与 Python 基准逐参数 diff。
+## 四、构建
 
+| 平台 | 文档 | 要点 |
+| --- | --- | --- |
+| Windows | [BUILD-WINDOWS.md](BUILD-WINDOWS.md) | .NET 8 SDK 即可，**不需要 Visual Studio**；`EnableCoreMrtTooling=false` + `EnableMsixTooling=true` 是无 VS 构建的关键 |
+| Android | [BUILD-ANDROID.md](BUILD-ANDROID.md) | Android Studio 打开 `android/`（AGP 8.5.2 / Gradle 8.7 / compileSdk 34），依赖可走国内镜像 |
+
+```bash
+# Windows
+cd windows
+dotnet publish TransMusic.App/TransMusic.App.csproj -c Release -r win-x64 --self-contained false
+
+# Android（只打 ARM 架构，体积减半）
+cd android
+gradle assembleRelease -PabiFilters=arm64-v8a,armeabi-v7a
+apksigner sign --ks release.jks --out TransMusic-android-arm.apk app-release-unsigned.apk
 ```
-$ python tests/parity_winui_test.py     →  WinUI 端与 Python 端参数完全一致 ✔
-$ python tests/parity_test.py           →  Android 端与 Python 端参数完全一致 ✔
-```
 
-> 唯一有意的差别：进度上报通道。Windows 用 `-progress pipe:1` 解析 stdout，Android 用 FFmpegKit 的 statistics 回调，
-> 所以该参数不参与对比（`report_progress=False`）。
+---
 
 ## 五、测试
 
-| 命令 | 覆盖内容 | 结果 |
-| --- | --- | --- |
-| `python tests/smoke_test.py` | Python 引擎：15 格式矩阵、`flac→mp3→ogg→opus→wav` 互转链、标签封面、预设、取消、进度 | 通过 ✔ |
-| `python tests/parity_winui_test.py` | C# vs Python：236 用例逐参数 diff | 100% 一致 ✔ |
-| `python tests/parity_test.py` | Kotlin vs Python：236 用例逐参数 diff | 100% 一致 ✔ |
-| `python tests/winui_check.py` | WinUI 工程：XAML 合法性、x:Name/事件处理器/绑定属性是否存在、csproj 关键属性、格式表漂移 | 通过 ✔ |
-| `python tests/android_check.py` | Android 工程：XML、R 资源、括号配平、包名、依赖与 Compose 配置、图标名、格式表漂移 | 通过 ✔ |
-| `python tests/kotlin_syntax_check.py` | kotlinc 语法级编译 18 个 Kotlin 文件 | 通过 ✔ |
-| `dotnet run --project windows/TransMusic.Tests -- selftest --ffmpeg <path>` | **WinUI 引擎真跑**：15 种格式全部转换并回读校验、命名冲突、模板、队列完成/取消、半成品清理 | 34/34 通过 ✔ |
+```bash
+python tests/smoke_test.py                # Python 引擎：15 格式矩阵、互转链、标签封面、取消、进度
+python tests/parity_winui_test.py         # C# vs Python：236 用例逐参数 diff
+python tests/parity_test.py               # Kotlin vs Python：236 用例逐参数 diff（需 tools/kotlinc）
+python tests/winui_check.py               # WinUI 工程静态检查（XAML/绑定/事件/csproj/格式表漂移）
+python tests/android_check.py             # Android 工程静态检查（XML/R 资源/包名/依赖/格式表漂移）
+python tests/kotlin_syntax_check.py       # Kotlin 语法级编译
+
+# WinUI 引擎真跑：15 种格式全部转换并回读校验、命名冲突、队列完成/取消
+cd windows && dotnet run --project TransMusic.Tests -- selftest --ffmpeg <ffmpeg 路径>
+```
+
+当前状态：上述全部通过（C# 引擎自检 34/34，两端参数一致性各 236/236）。
+
+---
 
 ## 六、目录结构
 
 ```
 transmusic/                 Python 引擎（格式数据源 + CLI + 测试基准）
-  formats.py                15 种格式 / 8 预设 / 扩展名表 —— 三端的唯一数据源
+  formats.py                15 种格式 / 8 预设 / 扩展名表 —— 三端唯一数据源
   engine.py                 ffmpeg 定位、命令构建、探测、执行、进度解析
   cli.py                    命令行批量模式
 main.py                     命令行入口
 
 windows/                    Windows 版（WinUI 3）
-  TransMusic.Core/          纯 .NET 8 引擎类库（命令构造、队列、探测、命名）
-  TransMusic.App/           WinUI 3 界面（XAML + MVVM，深色 Fluent）
-  TransMusic.Tests/         引擎自检 + 参数对比工具（控制台）
-  publish/                  已发布成品：TransMusic.exe
+  TransMusic.Core/          纯 .NET 8 引擎类库
+  TransMusic.App/           XAML + MVVM 界面
+  TransMusic.Tests/         引擎自检 + 参数对比工具
 
 android/                    Android 版（Kotlin + Compose + MD3E）
   app/src/main/java/com/transmusic/converter/
     model/Formats.kt        ⚠ 自动生成
-    engine/                 CommandBuilder / FfmpegEngine / AudioProbe
-    core/                   队列、状态、ViewModel、偏好
-    ui/                     主题、主界面、设置面板、任务卡
+    engine/  core/  ui/  util/
 
-tools/                      生成器与开发脚本（图标、三端格式表、ffmpeg 获取、截图）
-tests/                      全部自动化测试
+tools/                      图标生成、三端格式表生成、ffmpeg 获取、截图脚本
+tests/                      自动化测试
 docs/                       截图
 ```
 
+---
+
 ## 七、常见问题
 
-- **Windows 双击没反应**：确认用的是 `windows\publish\TransMusic.exe`（同目录需有 `resources.pri` 与 dll）。
-- **提示找不到 ffmpeg**：放到 exe 同目录 / 同目录 `ffmpeg\` / PATH，或设 `TRANSMUSIC_FFMPEG`。
-- **转 MP3 报采样率不支持**：会把非常规采样率吸附到编码器支持的值（96 kHz → 48 kHz），无损格式原样保留。
-- **元数据丢了**：目标格式本身不支持标签（WAV / AIFF / AC3 / MP2）时会丢弃，这是容器限制。
+- **Windows 双击没反应 / 闪退**：确认解压完整（同目录要有 `resources.pri`、`TransMusic.dll`、`ffmpeg\ffmpeg.exe`）。
+- **提示找不到 ffmpeg**：放到 exe 同目录、同目录 `ffmpeg\`、PATH，或设环境变量 `TRANSMUSIC_FFMPEG`。
+- **转 MP3 报采样率不支持**：程序会把非常规采样率吸附到编码器支持值（96 kHz → 48 kHz），无损格式原样保留。
+- **元数据丢了**：目标格式本身不支持标签（WAV / AIFF / AC3 / MP2）时会丢弃，属容器限制。
 - **WAV 32 bit 是浮点**（`pcm_f32le`）；要整数 24 bit 请选 24 bit。
-- **Android 转码失败**：确认 `abiFilters` 覆盖手机架构（真机多为 `arm64-v8a`）；依赖拉不到时见 BUILD-ANDROID.md。
+- **Android 装不上**：确认是 ARM 设备（x86 平板/模拟器需另打 `x86_64` 架构包：`-PabiFilters=x86_64`）。
+- **Android 转码失败**：多为输出目录权限或引擎缺失，先看 App 内「日志」面板的错误行。
+
+## 八、许可与致谢
+
+本项目代码可自由使用与修改。内置或依赖的第三方组件：
+
+- **FFmpeg**（LGPL/GPL，视构建配置）：Windows 版随包附带 ffmpeg 7.1 essentials 二进制；Android 版通过 FFmpegKit 6.0-2 使用
+- **FFmpegKit**（LGPL v3）— 已归档项目，本项目通过镜像仓库/离线 AAR 引用
+- **Jetpack Compose / Material 3 / Windows App SDK**：Apache 2.0 / MIT
+- 编码器（LAME、libopus、libvorbis、libspeex、WavPack 等）各自遵循其许可证
+
+商业分发前请自行复核 FFmpeg 的构建选项（是否含 GPL 组件）与各编解码器的专利/许可要求。
