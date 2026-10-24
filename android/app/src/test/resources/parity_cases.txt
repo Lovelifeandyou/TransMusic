@@ -1,0 +1,711 @@
+# src=D:/音乐/in 1.mp3
+# dst=D:/out/out 1.flac
+# total=354
+mp3-v0-cdmp3320-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v0-himp3320-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-b:a320k-ar48000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v0-mono24mp3320-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-b:a320k-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v0-oddmp3320-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v0-dsd64mp3320-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v0-dsd128mp3320-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v1-cdmp3320-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-map_metadata-1-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v1-himp3320-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-ar48000-map_metadata-1-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v1-mono24mp3320-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-map_metadata-1-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v1-oddmp3320-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-map_metadata-1-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v1-dsd64mp3320-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v1-dsd128mp3320-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v2-cdmp3320-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-ar48000-ac1-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v2-himp3320-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-b:a320k-ar48000-ac1-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v2-mono24mp3320-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-b:a320k-ar48000-ac1-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v2-oddmp3320-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-ar48000-ac1-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v2-dsd64mp3320-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v2-dsd128mp3320-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v3-cdmp300000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-q:a0-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v3-himp300000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-q:a0-ar48000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v3-mono24mp300000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-q:a0-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v3-oddmp300000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-q:a0-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v3-dsd64mp300000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-q:a0-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v3-dsd128mp300000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-q:a0-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v4-cdmp3320-1800000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-ar8000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v4-himp3320-1800000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-b:a320k-ar8000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v4-mono24mp3320-1800000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:alibmp3lame-b:a320k-ar8000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v4-oddmp3320-1800000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-ar8000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v4-dsd64mp3320-1800000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar8000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+mp3-v4-dsd128mp3320-1800000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibmp3lame-b:a320k-aflowpass=f=30000-ar8000-map_metadata0-map_chapters-1-id3v2_version3-write_id3v11D:/out/out 1.flac
+m4a_aac-v0-cdm4a_aac256-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v0-him4a_aac256-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aaac-b:a256k-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v0-mono24m4a_aac256-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aaac-b:a256k-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v0-oddm4a_aac256-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v0-dsd64m4a_aac256-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar88200-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v0-dsd128m4a_aac256-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar96000-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v1-cdm4a_aac256-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v1-him4a_aac256-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v1-mono24m4a_aac256-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v1-oddm4a_aac256-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v1-dsd64m4a_aac256-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v1-dsd128m4a_aac256-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar96000-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v2-cdm4a_aac256-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v2-him4a_aac256-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aaac-b:a256k-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v2-mono24m4a_aac256-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aaac-b:a256k-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v2-oddm4a_aac256-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v2-dsd64m4a_aac256-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v2-dsd128m4a_aac256-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v3-cdm4a_aac256-1800000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-ar8000-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v3-him4a_aac256-1800000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aaac-b:a256k-ar8000-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v3-mono24m4a_aac256-1800000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aaac-b:a256k-ar8000-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v3-oddm4a_aac256-1800000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-ar8000-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v3-dsd64m4a_aac256-1800000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar8000-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_aac-v3-dsd128m4a_aac256-1800000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aaac-b:a256k-aflowpass=f=30000-ar8000-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+flac-v0-cdflac0-100165114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v0-hiflac0-100165119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v0-mono24flac0-100165114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v0-oddflac0-100165113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v0-dsd64flac0-1001651135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-aflowpass=f=30000-ar88200-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v0-dsd128flac0-1001651170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-ar176400-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v1-cdflac0-10016-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata-1-map_chapters-1D:/out/out 1.flac
+flac-v1-hiflac0-10016-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata-1-map_chapters-1D:/out/out 1.flac
+flac-v1-mono24flac0-10016-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata-1-map_chapters-1D:/out/out 1.flac
+flac-v1-oddflac0-10016-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-map_metadata-1-map_chapters-1D:/out/out 1.flac
+flac-v1-dsd64flac0-10016-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1D:/out/out 1.flac
+flac-v1-dsd128flac0-10016-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-ar176400-map_metadata-1-map_chapters-1D:/out/out 1.flac
+flac-v2-cdflac0-148000116-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v2-hiflac0-148000116-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aflac-sample_fmts16-compression_level5-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v2-mono24flac0-148000116-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aflac-sample_fmts16-compression_level5-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v2-oddflac0-148000116-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v2-dsd64flac0-148000116-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v2-dsd128flac0-148000116-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts16-compression_level5-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v3-cdflac0-1002412114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts32-compression_level12-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v3-hiflac0-1002412119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aflac-sample_fmts32-compression_level12-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v3-mono24flac0-1002412114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aflac-sample_fmts32-compression_level12-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v3-oddflac0-1002412113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts32-compression_level12-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v3-dsd64flac0-10024121135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts32-compression_level12-aflowpass=f=30000-ar88200-map_metadata0-map_chapters-1D:/out/out 1.flac
+flac-v3-dsd128flac0-10024121170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aflac-sample_fmts32-compression_level12-ar176400-map_metadata0-map_chapters-1D:/out/out 1.flac
+wav-v0-cdwav0-10016-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v0-hiwav0-10016-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v0-mono24wav0-10016-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v0-oddwav0-10016-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v0-dsd64wav0-10016-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v0-dsd128wav0-10016-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-ar176400-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v1-cdwav0-10016-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v1-hiwav0-10016-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v1-mono24wav0-10016-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v1-oddwav0-10016-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v1-dsd64wav0-10016-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v1-dsd128wav0-10016-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-ar176400-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v2-cdwav0-148000116-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v2-hiwav0-148000116-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v2-mono24wav0-148000116-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v2-oddwav0-148000116-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v2-dsd64wav0-148000116-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wav-v2-dsd128wav0-148000116-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16le-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+m4a_alac-v0-cdm4a_alac0-10016-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v0-him4a_alac0-10016-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aalac-sample_fmts16p-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v0-mono24m4a_alac0-10016-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aalac-sample_fmts16p-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v0-oddm4a_alac0-10016-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v0-dsd64m4a_alac0-10016-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-aflowpass=f=30000-ar88200-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v0-dsd128m4a_alac0-10016-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-ar176400-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v1-cdm4a_alac0-10016-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v1-him4a_alac0-10016-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v1-mono24m4a_alac0-10016-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v1-oddm4a_alac0-10016-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v1-dsd64m4a_alac0-10016-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v1-dsd128m4a_alac0-10016-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-ar176400-map_metadata-1-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v2-cdm4a_alac0-148000116-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v2-him4a_alac0-148000116-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aalac-sample_fmts16p-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v2-mono24m4a_alac0-148000116-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-map0:v:0?-c:vcopy-disposition:vattached_pic-sn-dn-c:aalac-sample_fmts16p-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v2-oddm4a_alac0-148000116-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v2-dsd64m4a_alac0-148000116-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+m4a_alac-v2-dsd128m4a_alac0-148000116-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aalac-sample_fmts16p-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1-movflags+faststartD:/out/out 1.flac
+ogg-v0-cdogg192-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v0-hiogg192-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v0-mono24ogg192-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v0-oddogg192-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v0-dsd64ogg192-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v0-dsd128ogg192-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v1-cdogg192-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ogg-v1-hiogg192-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ogg-v1-mono24ogg192-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ogg-v1-oddogg192-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ogg-v1-dsd64ogg192-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ogg-v1-dsd128ogg192-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ogg-v2-cdogg192-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v2-hiogg192-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v2-mono24ogg192-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v2-oddogg192-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v2-dsd64ogg192-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v2-dsd128ogg192-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v3-cdogg00000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-q:a10-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v3-hiogg00000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-q:a10-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v3-mono24ogg00000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-q:a10-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v3-oddogg00000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-q:a10-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v3-dsd64ogg00000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-q:a10-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v3-dsd128ogg00000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-q:a10-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v4-cdogg192-1800000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar8000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v4-hiogg192-1800000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar8000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v4-mono24ogg192-1800000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar8000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v4-oddogg192-1800000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-ar8000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v4-dsd64ogg192-1800000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar8000-map_metadata0-map_chapters-1D:/out/out 1.flac
+ogg-v4-dsd128ogg192-1800000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibvorbis-b:a192k-aflowpass=f=30000-ar8000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v0-cdopus128-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v0-hiopus128-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v0-mono24opus128-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v0-oddopus128-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v0-dsd64opus128-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v0-dsd128opus128-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v1-cdopus128-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+opus-v1-hiopus128-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+opus-v1-mono24opus128-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-map_metadata-1-map_chapters-1D:/out/out 1.flac
+opus-v1-oddopus128-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+opus-v1-dsd64opus128-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+opus-v1-dsd128opus128-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+opus-v2-cdopus128-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v2-hiopus128-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v2-mono24opus128-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v2-oddopus128-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v2-dsd64opus128-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v2-dsd128opus128-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v3-cdopus00000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a192k-vbron-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v3-hiopus00000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a192k-vbron-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v3-mono24opus00000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a192k-vbron-compression_level10-applicationaudio-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v3-oddopus00000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a192k-vbron-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v3-dsd64opus00000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a192k-vbron-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v3-dsd128opus00000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a192k-vbron-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v4-cdopus128-14800000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v4-hiopus128-14800000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v4-mono24opus128-14800000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v4-oddopus128-14800000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v4-dsd64opus128-14800000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+opus-v4-dsd128opus128-14800000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibopus-b:a128k-compression_level10-applicationaudio-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+aiff-v0-cdaiff0-10016-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v0-hiaiff0-10016-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v0-mono24aiff0-10016-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v0-oddaiff0-10016-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v0-dsd64aiff0-10016-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v0-dsd128aiff0-10016-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-ar176400-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v1-cdaiff0-10016-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v1-hiaiff0-10016-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v1-mono24aiff0-10016-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v1-oddaiff0-10016-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v1-dsd64aiff0-10016-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v1-dsd128aiff0-10016-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-ar176400-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v2-cdaiff0-148000116-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v2-hiaiff0-148000116-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v2-mono24aiff0-148000116-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v2-oddaiff0-148000116-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v2-dsd64aiff0-148000116-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+aiff-v2-dsd128aiff0-148000116-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:apcm_s16be-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wma-v0-cdwma192-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v0-hiwma192-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v0-mono24wma192-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v0-oddwma192-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar44100-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v0-dsd64wma192-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v0-dsd128wma192-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar48000-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v1-cdwma192-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wma-v1-hiwma192-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wma-v1-mono24wma192-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wma-v1-oddwma192-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wma-v1-dsd64wma192-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wma-v1-dsd128wma192-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wma-v2-cdwma192-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v2-hiwma192-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v2-mono24wma192-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v2-oddwma192-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v2-dsd64wma192-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v2-dsd128wma192-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v3-cdwma192-14410000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar44100-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v3-hiwma192-14410000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar44100-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v3-mono24wma192-14410000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar44100-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v3-oddwma192-14410000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-ar44100-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v3-dsd64wma192-14410000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar44100-map_metadata0-map_chapters-1D:/out/out 1.flac
+wma-v3-dsd128wma192-14410000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awmav2-b:a192k-aflowpass=f=30000-ar44100-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v0-cdwv0-100164114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v0-hiwv0-100164119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v0-mono24wv0-100164114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v0-oddwv0-100164113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v0-dsd64wv0-1001641135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-aflowpass=f=30000-ar88200-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v0-dsd128wv0-1001641170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-ar176400-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v1-cdwv0-10016-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wv-v1-hiwv0-10016-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wv-v1-mono24wv0-10016-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wv-v1-oddwv0-10016-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wv-v1-dsd64wv0-10016-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wv-v1-dsd128wv0-10016-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-ar176400-map_metadata-1-map_chapters-1D:/out/out 1.flac
+wv-v2-cdwv0-148000116-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v2-hiwv0-148000116-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v2-mono24wv0-148000116-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v2-oddwv0-148000116-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v2-dsd64wv0-148000116-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v2-dsd128wv0-148000116-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts16p-compression_level4-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v3-cdwv0-100328114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts32p-compression_level8-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v3-hiwv0-100328119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts32p-compression_level8-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v3-mono24wv0-100328114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts32p-compression_level8-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v3-oddwv0-100328113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts32p-compression_level8-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v3-dsd64wv0-1003281135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts32p-compression_level8-aflowpass=f=30000-ar88200-map_metadata0-map_chapters-1D:/out/out 1.flac
+wv-v3-dsd128wv0-1003281170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:awavpack-sample_fmts32p-compression_level8-ar176400-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v0-cdtta0-10016-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v0-hitta0-10016-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v0-mono24tta0-10016-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v0-oddtta0-10016-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v0-dsd64tta0-10016-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-aflowpass=f=30000-ar88200-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v0-dsd128tta0-10016-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-ar176400-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v1-cdtta0-10016-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata-1-map_chapters-1D:/out/out 1.flac
+tta-v1-hitta0-10016-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata-1-map_chapters-1D:/out/out 1.flac
+tta-v1-mono24tta0-10016-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata-1-map_chapters-1D:/out/out 1.flac
+tta-v1-oddtta0-10016-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-map_metadata-1-map_chapters-1D:/out/out 1.flac
+tta-v1-dsd64tta0-10016-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-aflowpass=f=30000-ar88200-map_metadata-1-map_chapters-1D:/out/out 1.flac
+tta-v1-dsd128tta0-10016-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-ar176400-map_metadata-1-map_chapters-1D:/out/out 1.flac
+tta-v2-cdtta0-148000116-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v2-hitta0-148000116-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v2-mono24tta0-148000116-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v2-oddtta0-148000116-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v2-dsd64tta0-148000116-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+tta-v2-dsd128tta0-148000116-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:atta-sample_fmts16-aflowpass=f=30000-ar48000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+ac3-v0-cdac3448-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v0-hiac3448-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v0-mono24ac3448-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v0-oddac3448-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v0-dsd64ac3448-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v0-dsd128ac3448-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v1-cdac3448-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v1-hiac3448-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v1-mono24ac3448-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v1-oddac3448-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v1-dsd64ac3448-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v1-dsd128ac3448-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v2-cdac3448-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v2-hiac3448-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v2-mono24ac3448-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v2-oddac3448-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v2-dsd64ac3448-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v2-dsd128ac3448-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v3-cdac3448-14410000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v3-hiac3448-14410000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v3-mono24ac3448-14410000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v3-oddac3448-14410000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v3-dsd64ac3448-14410000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+ac3-v3-dsd128ac3448-14410000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aac3-b:a448k-aflowpass=f=30000-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v0-cdeac3640-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v0-hieac3640-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v0-mono24eac3640-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v0-oddeac3640-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v0-dsd64eac3640-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v0-dsd128eac3640-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v1-cdeac3640-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v1-hieac3640-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v1-mono24eac3640-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v1-oddeac3640-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v1-dsd64eac3640-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v1-dsd128eac3640-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v2-cdeac3640-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v2-hieac3640-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v2-mono24eac3640-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v2-oddeac3640-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v2-dsd64eac3640-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v2-dsd128eac3640-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v3-cdeac3640-14410000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v3-hieac3640-14410000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v3-mono24eac3640-14410000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v3-oddeac3640-14410000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v3-dsd64eac3640-14410000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+eac3-v3-dsd128eac3640-14410000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:aeac3-b:a640k-aflowpass=f=30000-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v0-cdmp2384-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v0-himp2384-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v0-mono24mp2384-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v0-oddmp2384-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v0-dsd64mp2384-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v0-dsd128mp2384-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v1-cdmp2384-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v1-himp2384-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v1-mono24mp2384-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v1-oddmp2384-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v1-dsd64mp2384-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v1-dsd128mp2384-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar48000-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v2-cdmp2384-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v2-himp2384-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v2-mono24mp2384-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v2-oddmp2384-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v2-dsd64mp2384-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v2-dsd128mp2384-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar48000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v3-cdmp2384-14410000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v3-himp2384-14410000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v3-mono24mp2384-14410000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v3-oddmp2384-14410000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v3-dsd64mp2384-14410000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+mp2-v3-dsd128mp2384-14410000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:amp2-b:a384k-aflowpass=f=30000-ar44100-map_metadata-1-map_chapters-1D:/out/out 1.flac
+spx-v0-cdspx16-1000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v0-hispx16-1000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v0-mono24spx16-1000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v0-oddspx16-1000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v0-dsd64spx16-1000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v0-dsd128spx16-1000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v1-cdspx16-1000-1004410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+spx-v1-hispx16-1000-1009600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+spx-v1-mono24spx16-1000-1004800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+spx-v1-oddspx16-1000-1003200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+spx-v1-dsd64spx16-1000-10035280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar32000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+spx-v1-dsd128spx16-1000-10070560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar32000-ac1-map_metadata-1-map_chapters-1D:/out/out 1.flac
+spx-v2-cdspx16-14800010-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v2-hispx16-14800010-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v2-mono24spx16-14800010-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v2-oddspx16-14800010-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v2-dsd64spx16-14800010-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v2-dsd128spx16-14800010-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar32000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v3-cdspx16-1800000-1114410020pcm_s16le
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar8000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v3-hispx16-1800000-1119600021flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar8000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v3-mono24spx16-1800000-1114800011flac
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar8000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v3-oddspx16-1800000-1113200060ac3
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-ar8000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v3-dsd64spx16-1800000-11135280020dsd_lsbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar8000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac
+spx-v3-dsd128spx16-1800000-11170560020dsd_msbf_planar
+-hide_banner-nostdin-y-loglevelerror-iD:/音乐/in 1.mp3-map0:a:0-vn-sn-dn-c:alibspeex-b:a16k-aflowpass=f=30000-ar8000-ac1-map_metadata0-map_chapters-1D:/out/out 1.flac

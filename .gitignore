@@ -52,3 +52,6 @@ Thumbs.db
 
 # 编译产物（可由 tests 自动重建）
 tests/parity/harness.jar
+
+# 可选的 Kotlin 编译器（仅 tests/parity_test.py 用；Android 一致性已由 Gradle 单测覆盖）
+tools/kotlinc/
