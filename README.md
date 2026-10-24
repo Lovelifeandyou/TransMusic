@@ -1,5 +1,7 @@
 # 音频格式转换器 · TransMusic 1.0.0
 
+**[⬇ 下载页](https://github.com/Lovelifeandyou/TransMusic/releases)**　Windows x64 免安装包 · Android ARM APK · 源码包
+
 **Windows（WinUI 3）+ Android（Material 3 Expressive / Jetpack Compose）** 双端音频格式互转工具，
 另附一套 Python 命令行工具作为批量引擎与测试基准。三端共用同一份格式定义，
 同一份源文件在任意端都会得到**完全相同的 ffmpeg 编码参数**（236 个用例逐条自动化对齐）。
