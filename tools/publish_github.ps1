@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     把 TransMusic 发布到 GitHub：创建仓库 → 推送 main → 建 Release → 上传三个产物。
 
@@ -60,8 +60,10 @@ $owner = (& $ghExe api user --jq .login).Trim()
 Write-Host "GitHub 账号：$owner" -ForegroundColor Cyan
 
 $exists = $false
+$ErrorActionPreference = "Continue"
 & $ghExe repo view "$owner/$Repository" --json name 2>$null | Out-Null
 if ($LASTEXITCODE -eq 0) { $exists = $true }
+$ErrorActionPreference = "Stop"
 
 if ($exists) {
     Write-Host "仓库 $owner/$Repository 已存在，直接推送" -ForegroundColor Yellow
@@ -82,7 +84,12 @@ if ($pending) {
 }
 git branch -M main
 git push -u origin main
-if ($LASTEXITCODE -ne 0) { throw "推送失败" }
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "推送失败，尝试 gh auth setup-git 后重试…" -ForegroundColor Yellow
+    & $ghExe auth setup-git 2>$null
+    git push -u origin main
+    if ($LASTEXITCODE -ne 0) { throw "推送失败：请检查 gh auth status 与网络" }
+}
 Write-Host "源码已推送到 https://github.com/$owner/$Repository" -ForegroundColor Green
 
 # ---------- 4. Release ----------
@@ -111,8 +118,11 @@ $notes = @"
 $notesFile = Join-Path $env:TEMP "transmusic-release-notes.md"
 $notes | Set-Content -Path $notesFile -Encoding UTF8
 
+$ErrorActionPreference = "Continue"
 & $ghExe release view $Tag 2>$null | Out-Null
-if ($LASTEXITCODE -eq 0) {
+$releaseExists = ($LASTEXITCODE -eq 0)
+$ErrorActionPreference = "Stop"
+if ($releaseExists) {
     Write-Host "Release $Tag 已存在，改为上传/覆盖资产" -ForegroundColor Yellow
 } else {
     & $ghExe release create $Tag --title "TransMusic $Tag" --notes-file $notesFile | Out-Null
