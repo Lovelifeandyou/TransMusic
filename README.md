@@ -31,17 +31,33 @@
 
 | 文件 | 适用 | 说明 |
 | --- | --- | --- |
-| `TransMusic-windows-x64.zip` | Windows 10 1809+ / 11 (x64) | 约 60 MB，解压后双击 `TransMusic.exe`，**免安装**、内置 ffmpeg |
-| `TransMusic-android-arm-v1.0.0.apk` | Android 7.0+（arm64-v8a / armeabi-v7a） | 约 28 MB，自签名，需允许「安装未知来源应用」 |
-| `TransMusic-src-v1.0.0.zip` | 开发者 | 全部源码（不含构建产物） |
+| `TransMusic-1.2.0-standalone.exe` | Windows 10 1809+ / 11 (x64) | **单文件**，约 71 MB，双击即用，免安装、无需装 .NET 或 ffmpeg |
+| `TransMusic-windows-x64.zip` | Windows 10 1809+ / 11 (x64) | 约 60 MB，解压后双击 `TransMusic.exe`（启动比单文件版快一点） |
+| `TransMusic-android-arm-v1.2.0.apk` | Android 7.0+（arm64-v8a / armeabi-v7a） | 约 28 MB，自签名，需允许「安装未知来源应用」 |
+| `TransMusic-src-v1.2.0.zip` | 开发者 | 全部源码（不含构建产物） |
+
+### Windows 单文件版是怎么做的
+
+WinUI 3（Windows App SDK）**官方不支持** `PublishSingleFile`：Windows App SDK 的 Bootstrap
+和 MRT Core 都按「exe 所在目录」查找原生库与 `resources.pri`，而单文件把库解压到临时目录，
+直接抛未处理异常（`0xe0434352`）。所以这里换了个做法：
+
+- 用一个极小的启动器把完整应用（含 ffmpeg）作为 zip **内嵌**进一个普通 exe
+- 首次运行时解压到 `%LOCALAPPDATA%\TransMusic\app\<版本>`，再启动真正的主程序
+- 之后每次双击直接启动，不解压；版本号变化时自动解压新目录并清理旧目录
+
+对外始终只有**一个 exe 文件**。首次启动多花 1–2 秒解压，换来的是真正免安装、免运行时的单文件分发。
 
 校验：`SHA256SUMS.txt` 里是各文件的 SHA-256。
 
 ### Windows
 
-1. 解压 `TransMusic-windows-x64.zip` 到任意目录（路径别用中文层级太深的也行，程序已声明 longPathAware）。
-2. 双击 `TransMusic.exe`。
-3. 首次启动若 Windows 弹出 SmartScreen 提示，选择「更多信息 → 仍要运行」（未签名应用属正常现象）。
+**单文件版（推荐）**：双击 `TransMusic-1.2.0-standalone.exe` 即可。首次运行会解压到
+`%LOCALAPPDATA%\TransMusic\app\1.2.0`，之后启动更快。
+
+**便携版**：解压 `TransMusic-windows-x64.zip` 到任意目录，双击 `TransMusic.exe`。
+
+两种方式首次启动若弹出 SmartScreen 提示，选「更多信息 → 仍要运行」（未签名应用属正常现象）。
 
 程序自带 `ffmpeg\ffmpeg.exe`、`resources.pri` 与 Windows App SDK 运行时文件，**不需要**另外装 .NET 或 ffmpeg。
 
@@ -110,9 +126,12 @@ python main.py -f opus -j 4 -n D:\in                   # -n 只打印命令不�
 | Android | [BUILD-ANDROID.md](BUILD-ANDROID.md) | Android Studio 打开 `android/`（AGP 8.5.2 / Gradle 8.7 / compileSdk 34），依赖可走国内镜像 |
 
 ```bash
-# Windows
+# Windows 便携版
 cd windows
 dotnet publish TransMusic.App/TransMusic.App.csproj -c Release -r win-x64 --self-contained false
+
+# Windows 单文件 exe（自解压引导器，WinUI 3 不支持原生 single-file）
+powershell -ExecutionPolicy Bypass -File tools/build_single_exe.ps1 -Version 1.2.0
 
 # Android（只打 ARM 架构，体积减半）
 cd android
@@ -153,6 +172,7 @@ main.py                     命令行入口
 windows/                    Windows 版（WinUI 3）
   TransMusic.Core/          纯 .NET 8 引擎类库
   TransMusic.App/           XAML + MVVM 界面
+  TransMusic.Launcher/      单文件启动器（内嵌完整应用，首次运行自解压）
   TransMusic.Tests/         引擎自检 + 参数对比工具
 
 android/                    Android 版（Kotlin + Compose + MD3E）

@@ -98,7 +98,24 @@ python tests/winui_check.py          # XAML/绑定/事件/x:Name/csproj 属性/�
 python tests/smoke_test.py           # Python 引擎的 15 格式矩阵与互转链
 ```
 
-## 五、常见问题
+## 五、打包成单文件 exe
+
+    powershell -ExecutionPolicy Bypass -File toolsuild_single_exe.ps1 -Version 1.2.0
+    # 产物：release\TransMusic-1.2.0-standalone.exe（约 71 MB）
+
+流程：dotnet publish 出完整应用 → Compress-Archive 成 payload.zip → 作为 EmbeddedResource
+塞进 TransMusic.Launcher → 用 PublishSingleFile + PublishTrimmed 输出单个 exe。
+
+注意事项：
+
+- **不要**直接给 TransMusic.App 加 PublishSingleFile=true。Windows App SDK 不支持，
+  启动会抛 0xe0434352（原生库与 resources.pri 找不到），已实测确认。
+- 启动器只负责解压 + 拉起主程序，随后立即退出，不常驻内存。
+- 解压目标 %LOCALAPPDATA%\TransMusicpp\<版本>；版本号取自启动器程序集版本，
+  升级后自动换目录并清理旧目录。
+- 载荷里必须包含 ffmpegfmpeg.exe（tools/fetch_ffmpeg.py 保证），否则单文件版没有转码引擎。
+
+## 六、常见问题
 
 - **双击没反应 / 闪退（0xC000027B）**：`resources.pri` 没生成。确认 csproj 里
   `EnableMsixTooling=true` 且输出目录存在 `resources.pri`；用 `dotnet build` 而不是手工拷贝文件。
